@@ -15,10 +15,10 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.pink),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Conocete'),
     );
   }
 }
@@ -41,7 +41,27 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
+<<<<<<< HEAD:conocete/lib/ui/pages/home/main.dart
       body: new DescriptionPlace(), // This trailing comma makes auto-formatting nicer for build methods.
+=======
+      body: Center(
+        // Center is a layout widget. It takes a single child and positions it
+        // in the middle of the parent.
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            const Text(
+              '',
+            ),
+            Text(
+              '$_counter',
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+          ],
+        ),
+      ),
+       // This trailing comma makes auto-formatting nicer for build methods.
+>>>>>>> 5798c31ffa51249a5b44412b33164f1c62d53ecb:conocete/lib/main.dart
     );
   }
 }
