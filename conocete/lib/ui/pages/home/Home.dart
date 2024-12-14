@@ -8,7 +8,7 @@ class Home extends StatelessWidget {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 255, 167, 221),
+        backgroundColor: Theme.of(context).colorScheme.primary,
       ),
       body: const Center(
         child: Text('Este es el homePage'),
