@@ -1,3 +1,4 @@
+import 'package:conocete/ui/pages/home/Home.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -7,17 +8,25 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+
+    var rosaFuerte = ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 255, 167, 221)) ;
+    var rosaClaro = ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 255, 230, 246));
+    var grisOscuro = ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 46, 46, 46));
+
+
+
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: rosaFuerte,
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: "APP"),
     );
   }
 }
@@ -40,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text(widget.title),
         ),
         body: Text(
-            'hola mundo') // This trailing comma makes auto-formatting nicer for build methods.
+            'Texto') // This trailing comma makes auto-formatting nicer for build methods.
         );
   }
 }
