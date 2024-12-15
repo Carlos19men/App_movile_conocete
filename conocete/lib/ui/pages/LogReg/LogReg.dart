@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../home/Home.dart';
 
-class Test extends StatelessWidget {
-  const Test({super.key});
+class LogReg extends StatelessWidget {
+  const LogReg({super.key});
 
   @override
   Widget build(BuildContext context) {
