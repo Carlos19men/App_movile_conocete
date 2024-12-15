@@ -1,4 +1,4 @@
-import 'package:conocete/ui/pages/Onborading/Onboarding.dart';
+import 'package:conocete/ui/pages/Onborading/Onboarding.dart.';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -19,7 +19,9 @@ class MyApp extends StatelessWidget {
     var grisOscuro = const Color.fromARGB(255, 46, 46, 46);
     var rosaError = const Color.fromARGB(255, 255, 150, 210);
 
+    // ignore: unused_local_variable
     var altura = MediaQuery.of(context).size.height;
+    // ignore: unused_local_variable
     var anchura = MediaQuery.of(context).size.width;
 
     return MaterialApp(
