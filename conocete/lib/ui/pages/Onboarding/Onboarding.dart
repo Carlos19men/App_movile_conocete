@@ -1,4 +1,6 @@
 import 'package:conocete/ui/pages/LogReg/LogReg.dart';
+import 'package:conocete/ui/pages/tipoUsr/TipoUsr.dart';
+import 'package:conocete/ui/pages/widgets/BotonApp.dart';
 import 'package:flutter/material.dart';
 
 
@@ -24,8 +26,8 @@ class Onboarding extends StatelessWidget {
         backgroundColor: Theme.of(context).primaryColor,
       body:Stack(
         children: [
-          Padding(padding: EdgeInsets.only(left: anchura* 0.3),
-          child: Image(image: AssetImage('assets/logo_app.png'), width: anchura * 0.4),
+          Center( heightFactor: 1.5,
+          child: Image(image: AssetImage('assets/logo_app.png'),width:altura*0.2,),
         ),
           Column(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -36,33 +38,13 @@ class Onboarding extends StatelessWidget {
                 Stack(
                     alignment:Alignment(0, -1),
                     children: [
-                      const Center(
+                       Center(
 
-                        child: Image(height: 450,
+                        child: Image(height: altura*0.5,
                           image: AssetImage('assets/chica_onboard.png'),
                         ),
                       ),
-                      Center(
-                        child: TextButton(
-                            style: ButtonStyle(
-                              foregroundColor: WidgetStateProperty.all<Color>(Color(0xff2e2e2e)),
-                              backgroundColor: WidgetStateProperty.resolveWith<Color?>(
-                                    (Set<WidgetState> states) {
-                                  if (states.contains(WidgetState.pressed)) {
-                                    return Theme.of(context).colorScheme.tertiary.withOpacity(0.5);
-                                  }
-                                  return Theme.of(context).colorScheme.secondary; // Use the component's default.
-                                },
-                              ),
-                            ),
-                            onPressed: () {
-                              Navigator.of(context).push(
-                                MaterialPageRoute(builder: (context) => const LogReg()),
-                              );
-                            },
-                            child: const Text('Iniciar',textScaler: TextScaler.linear(2),) ),
-
-                      ),
+                      BotonNav(etiqueta: "Iniciar", sig: LogReg())
                     ]),
               ]),
         ],

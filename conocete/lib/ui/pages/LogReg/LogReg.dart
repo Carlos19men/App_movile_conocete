@@ -3,6 +3,8 @@ import 'package:conocete/ui/pages/test/Test.dart';
 import 'package:conocete/ui/pages/widgets/BotonApp.dart';
 import 'package:flutter/material.dart';
 
+import '../tipoUsr/TipoUsr.dart';
+
 class LogReg extends StatefulWidget {
   const LogReg({super.key});
 
@@ -243,7 +245,7 @@ class RegState extends StatelessWidget {
                       ),
                     ),
                   ),
-                  BotonNav(etiqueta: "Registrarse", sig: Test())
+                  BotonNav(etiqueta: "Registrarse", sig: TipoUsr())
                 ],
               ),)
 

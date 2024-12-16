@@ -11,6 +11,9 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.primary,
+        title: const Center(
+          child: Text("Conócete"),
+        ),
       ),
       body: BotonNav(etiqueta: "Home", sig: LogReg()),
     );

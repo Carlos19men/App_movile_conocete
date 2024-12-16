@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_svg/flutter_svg.dart';
 
 
 class TipoUsr extends StatelessWidget {
@@ -17,7 +17,19 @@ class TipoUsr extends StatelessWidget {
         ),
         titleTextStyle: Theme.of(context).textTheme.headlineLarge,
       ),
+      body: Column(
+        children: [
+          Text("Con que tipo de usuario te identificas?"),
+          Center(
+            child: SvgPicture.asset('assets/donor_persona_brand_crop.png',width: 100,height: 100,),
+          )
 
+
+
+
+
+        ],
+      ),
     );
   }
 }
