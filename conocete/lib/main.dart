@@ -1,4 +1,4 @@
-import 'package:conocete/ui/pages/Onborading/Onboarding.dart.';
+import 'package:conocete/ui/pages/Onboarding/Onboarding.dart.';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -20,18 +20,20 @@ class MyApp extends StatelessWidget {
     var rosaError = const Color.fromARGB(255, 255, 150, 210);
 
     // ignore: unused_local_variable
-    var altura = MediaQuery.of(context).size.height;
+    final altura = MediaQuery.of(context).size.height;
     // ignore: unused_local_variable
-    var anchura = MediaQuery.of(context).size.width;
+    final anchura = MediaQuery.of(context).size.width;
 
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'App Conócete',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme(brightness:  Brightness.light, primary: rosaFuerte, onPrimary: grisOscuro, secondary: rosaClaro, onSecondary: grisOscuro, error: rosaError, onError: grisOscuro, surface: const Color(0xffffffff), onSurface: grisOscuro),
         useMaterial3: true,
         textTheme: GoogleFonts.chauPhilomeneOneTextTheme(),
-
+        buttonTheme: ButtonThemeData(
+          buttonColor: Colors.black,
+        )  ,
       ),
       home: const Onboarding(),
     );
