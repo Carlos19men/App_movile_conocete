@@ -1,3 +1,4 @@
+import 'package:conocete/ui/pages/tipoUsr/CheckBoxApp.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -21,9 +22,11 @@ class TipoUsr extends StatelessWidget {
         children: [
           Text("Con que tipo de usuario te identificas?"),
           Center(
-            child: SvgPicture.asset('assets/donor_persona_brand_crop.png',width: 100,height: 100,),
+            child: Image(height: 200,
+                image: AssetImage('assets/eleccion_usr.png'),
           )
-
+          ),
+          CheckBoxApp(),
 
 
 

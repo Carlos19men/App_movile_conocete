@@ -1,5 +1,4 @@
 import 'package:conocete/ui/pages/LogReg/LogReg.dart';
-import 'package:conocete/ui/pages/tipoUsr/TipoUsr.dart';
 import 'package:conocete/ui/pages/widgets/BotonApp.dart';
 import 'package:flutter/material.dart';
 

@@ -1,5 +1,4 @@
 import 'package:conocete/ui/pages/home/Home.dart';
-import 'package:conocete/ui/pages/test/Test.dart';
 import 'package:conocete/ui/pages/widgets/BotonApp.dart';
 import 'package:flutter/material.dart';
 
@@ -166,7 +165,7 @@ class RegState extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Center(
-            child: Image(image: AssetImage('assets/logo_app.png'), height: 150),
+            child: Image(image: AssetImage('assets/logo_app.png'), height: altura*0.2,),
           ),
           Stack(
             children: [
