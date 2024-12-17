@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../pages/TuSalud/tuSalud.dart';
-import '../pages/agenda/agenda.dart';
-import '../pages/home/homePage.dart';
+import '../TuSalud/tuSalud.dart';
+import '../agenda/agenda.dart';
+import '../home/homePage.dart';
 
 class Navbar extends StatefulWidget {
   State<StatefulWidget> createState() {
