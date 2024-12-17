@@ -52,7 +52,7 @@ class LogState extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Center(
-            child: Image(image: AssetImage('assets/logo_app.png'), height: 150),
+            child: Image(image: AssetImage('assets/logo_app.png'), height: altura*0.2,),
           ),
           Stack(
             children: [
