@@ -1,5 +1,6 @@
-import 'package:conocete/ui/pages/home/Home.dart';
+import 'package:conocete/ui/pages/Onboarding/Onboarding.dart.';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,20 +14,28 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    var rosaFuerte = ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 255, 167, 221)) ;
-    var rosaClaro = ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 255, 230, 246));
-    var grisOscuro = ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 46, 46, 46));
+    var rosaFuerte = const Color.fromARGB(255, 255, 167, 221) ;
+    var rosaClaro = const Color.fromARGB(255, 255, 230, 246);
+    var grisOscuro = const Color.fromARGB(255, 46, 46, 46);
+    var rosaError = const Color.fromARGB(255, 255, 150, 210);
 
-
+    // ignore: unused_local_variable
+    final altura = MediaQuery.of(context).size.height;
+    // ignore: unused_local_variable
+    final anchura = MediaQuery.of(context).size.width;
 
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'App Conócete',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: rosaFuerte,
+        colorScheme: ColorScheme(brightness:  Brightness.light, primary: rosaFuerte, onPrimary: grisOscuro, secondary: rosaClaro, onSecondary: grisOscuro, error: rosaError, onError: grisOscuro, surface: const Color(0xffffffff), onSurface: grisOscuro),
         useMaterial3: true,
+        textTheme: GoogleFonts.chauPhilomeneOneTextTheme(),
+        buttonTheme: ButtonThemeData(
+          buttonColor: Colors.black,
+        )  ,
       ),
-      home: const Home(),
+      home: const Onboarding(),
     );
   }
 }
@@ -48,7 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           title: Text(widget.title),
         ),
-        body: Text(
+        body: const Text(
             'Texto') // This trailing comma makes auto-formatting nicer for build methods.
         );
   }
