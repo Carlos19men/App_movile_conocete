@@ -26,6 +26,12 @@ class _Navbar extends State<Navbar> {
       appBar: AppBar(
         title: Center(child: Text('Conócete')),
         backgroundColor: Color.fromARGB(255, 255, 167, 221),
+        leading: IconButton(
+          icon: Icon(Icons.menu),
+          onPressed: () {
+            Scaffold.of(context).openDrawer();
+          },
+        ),
       ),
       body: paginas[indexTap],
       bottomNavigationBar: Theme(
