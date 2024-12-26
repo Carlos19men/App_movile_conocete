@@ -1,6 +1,6 @@
 import 'package:conocete/ui/pages/Onboarding/Onboarding.dart.';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -30,7 +30,6 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme(brightness:  Brightness.light, primary: rosaFuerte, onPrimary: grisOscuro, secondary: rosaClaro, onSecondary: grisOscuro, error: rosaError, onError: grisOscuro, surface: const Color(0xffffffff), onSurface: grisOscuro),
         useMaterial3: true,
-        textTheme: GoogleFonts.chauPhilomeneOneTextTheme(),
         buttonTheme: ButtonThemeData(
           buttonColor: Colors.black,
         )  ,
