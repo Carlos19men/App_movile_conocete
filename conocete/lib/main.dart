@@ -9,12 +9,10 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-
-    var rosaFuerte = const Color.fromARGB(255, 255, 167, 221) ;
+    var rosaFuerte = const Color.fromARGB(255, 255, 167, 221);
     var rosaClaro = const Color.fromARGB(255, 255, 230, 246);
     var grisOscuro = const Color.fromARGB(255, 46, 46, 46);
     var rosaError = const Color.fromARGB(255, 255, 150, 210);
@@ -28,11 +26,20 @@ class MyApp extends StatelessWidget {
       title: 'App Conócete',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme(brightness:  Brightness.light, primary: rosaFuerte, onPrimary: grisOscuro, secondary: rosaClaro, onSecondary: grisOscuro, error: rosaError, onError: grisOscuro, surface: const Color(0xffffffff), onSurface: grisOscuro),
+        colorScheme: ColorScheme(
+            brightness: Brightness.light,
+            primary: rosaFuerte,
+            onPrimary: grisOscuro,
+            secondary: rosaClaro,
+            onSecondary: grisOscuro,
+            error: rosaError,
+            onError: grisOscuro,
+            surface: const Color(0xffffffff),
+            onSurface: grisOscuro),
         useMaterial3: true,
         buttonTheme: ButtonThemeData(
           buttonColor: Colors.black,
-        )  ,
+        ),
       ),
       home: const Onboarding(),
     );
