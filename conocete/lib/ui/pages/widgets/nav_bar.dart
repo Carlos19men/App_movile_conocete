@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../TuSalud/tuSalud.dart';
+import '../TuSalud/tu_salud.dart';
 import '../agenda/agenda.dart';
 import '../home/homePage.dart';
 

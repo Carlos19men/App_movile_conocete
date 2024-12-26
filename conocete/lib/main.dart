@@ -1,4 +1,4 @@
-import 'package:conocete/ui/pages/Onboarding/Onboarding.dart.';
+import 'package:conocete/ui/pages/onboarding/onboarding.dart.';
 import 'package:flutter/material.dart';
 
 
@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
       title: 'App Conócete',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        fontFamily: 'Chau Philomene One',
         colorScheme: ColorScheme(
             brightness: Brightness.light,
             primary: rosaFuerte,
@@ -40,6 +41,8 @@ class MyApp extends StatelessWidget {
         buttonTheme: ButtonThemeData(
           buttonColor: Colors.black,
         ),
+
+
       ),
       home: const Onboarding(),
     );

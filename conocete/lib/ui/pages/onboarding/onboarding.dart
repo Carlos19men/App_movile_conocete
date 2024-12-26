@@ -1,6 +1,8 @@
-import 'package:conocete/ui/pages/LogReg/LogReg.dart';
-import 'package:conocete/ui/pages/widgets/BotonApp.dart';
+
 import 'package:flutter/material.dart';
+
+import '../LogReg/log_reg.dart';
+import '../widgets/boton_app.dart';
 
 
 class Onboarding extends StatelessWidget {
@@ -12,6 +14,7 @@ class Onboarding extends StatelessWidget {
 
     final altura = MediaQuery.of(context).size.height;
 
+    // ignore: unused_local_variable
     final anchura = MediaQuery.of(context).size.width;
 
     return Scaffold(
@@ -20,7 +23,7 @@ class Onboarding extends StatelessWidget {
         title: const Center(
           child: Text("Conócete"),
         ),
-        titleTextStyle: Theme.of(context).textTheme.headlineLarge,
+        titleTextStyle: Theme.of(context).textTheme.titleLarge,
       ),
         backgroundColor: Theme.of(context).primaryColor,
       body:Stack(

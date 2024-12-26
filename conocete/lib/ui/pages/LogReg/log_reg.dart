@@ -1,8 +1,9 @@
-import 'package:conocete/ui/pages/home/Home.dart';
-import 'package:conocete/ui/pages/widgets/BotonApp.dart';
+import 'package:conocete/ui/pages/home/home.dart';
+import 'package:conocete/ui/pages/home/homePage.dart';
 import 'package:flutter/material.dart';
 
-import '../tipoUsr/TipoUsr.dart';
+import '../tipoUsr/tipo_usr.dart';
+import '../widgets/boton_app.dart';
 
 class LogReg extends StatefulWidget {
   const LogReg({super.key});
@@ -42,9 +43,10 @@ class LogState extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.primary,
         title: const Center(
-          child: Text("Conócete"),
+          child: Text("Conócete",),
         ),
         titleTextStyle: Theme.of(context).textTheme.headlineLarge,
+
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -133,7 +135,7 @@ class LogState extends StatelessWidget {
                     );},),
 
                 ),
-                  BotonNav(etiqueta: "Iniciar Sesion", sig: Home())
+                  BotonNav(etiqueta: "Iniciar Sesion", sig: HomePage())
                 ],
               ),)
 

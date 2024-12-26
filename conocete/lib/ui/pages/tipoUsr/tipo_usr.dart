@@ -1,5 +1,6 @@
-import 'package:conocete/ui/pages/widgets/CheckBoxApp.dart';
 import 'package:flutter/material.dart';
+
+import '../widgets/check_box_app.dart';
 
 class TipoUsr extends StatelessWidget {
   const TipoUsr({super.key});

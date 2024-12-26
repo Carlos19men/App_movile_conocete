@@ -1,6 +1,7 @@
-import 'package:conocete/ui/pages/LogReg/LogReg.dart';
-import 'package:conocete/ui/pages/widgets/BotonApp.dart';
+
 import 'package:flutter/material.dart';
+import '../LogReg/log_reg.dart';
+import '../widgets/boton_app.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
