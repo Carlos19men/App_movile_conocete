@@ -57,7 +57,7 @@ class LogState extends StatelessWidget {
           Stack(
             children: [
               SizedBox(
-                height: altura * 0.70,
+                height: altura * 0.65,
                 width: anchura,
                 child: const DecoratedBox(
                   decoration: BoxDecoration(
@@ -126,8 +126,13 @@ class LogState extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: altura * 0.1,
-                  ),
+                    height: altura * 0.10,
+                    width: anchura *  0.7,
+                    child: TextButton(child: Text("Olvido la contraseña?",style:TextStyle(color: Colors.black)),onPressed:(){ Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => Home() as Widget),
+                    );},),
+
+                ),
                   BotonNav(etiqueta: "Iniciar Sesion", sig: Home())
                 ],
               ),)
@@ -170,7 +175,7 @@ class RegState extends StatelessWidget {
           Stack(
             children: [
               SizedBox(
-                height: altura * 0.70,
+                height: altura * 0.65,
                 width: anchura,
                 child: const DecoratedBox(
                   decoration: BoxDecoration(
