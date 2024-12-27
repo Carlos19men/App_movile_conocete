@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       title: 'App Conócete',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        fontFamily: 'Chau Philomene One',
+        fontFamily: 'ChauPhilomeneOne',
         colorScheme: ColorScheme(
             brightness: Brightness.light,
             primary: rosaFuerte,

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Tusalud extends StatelessWidget {
+  const Tusalud({super.key});
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
