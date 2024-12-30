@@ -15,7 +15,8 @@ class Tusalud extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
 
-    List<String> estados = ['Candasa', 'Con dolor', 'Debil'];
+    //No usar por ahora
+    //List<String> estados = ['Candasa', 'Con dolor', 'Debil'];
 
     return ListView(
       children: [
@@ -60,9 +61,9 @@ class Tusalud extends StatelessWidget {
 
             //texto bloque de texto del auto examen
             Positioned(
-                left: 60.0,
+                left: 30.0,
                 top: 30.0,
-                child: Row(
+                child: Column(
                   children: [
                     TextItem(Icon(Icons.abc), 'Conoce tu cuerpo'),
                     TextItem(Icon(Icons.abc), 'Conoce tu cuerpo'),
@@ -88,18 +89,23 @@ class Tusalud extends StatelessWidget {
         Text('¿Como te sientes hoy?'),
 
         //check bottoms de como te sientes
-        Row(
-          children: estados.map((i) {
-            return Builder(builder: (BuildContext context) {
-              return Container(
-                child: Row(
+        Row(children: [
+          Container(
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(color: Colors.blue),
+              child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [Text(i), Checkbox(value: null, onChanged: null)],
-                ),
-              );
-            });
-          }).toList(),
-        ),
+                  children: [
+                    Text(
+                      'mal',
+                    ),
+                    Checkbox(
+                      onChanged: null,
+                      hoverColor: Colors.pink[300],
+                      value: false,
+                    )
+                  ]))
+        ]),
 
         //grafica (buscar la libreria)
       ],
