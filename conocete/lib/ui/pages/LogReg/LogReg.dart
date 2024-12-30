@@ -1,8 +1,12 @@
-import 'package:conocete/ui/pages/home/Home.dart';
+
 import 'package:conocete/ui/pages/home/homePage.dart';
+
+import 'package:conocete/ui/pages/widgest/NavBar.dart';
+
 import 'package:conocete/ui/pages/widgets/BotonApp.dart';
 import 'package:flutter/material.dart';
 
+import '../home/homePage.dart';
 import '../tipoUsr/TipoUsr.dart';
 
 class LogReg extends StatefulWidget {
@@ -126,15 +130,9 @@ class LogState extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(
-                    height: altura * 0.10,
-                    width: anchura *  0.7,
-                    child: TextButton(child: Text("Olvido la contraseña?",style:TextStyle(color: Colors.black)),onPressed:(){ Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => Home() as Widget),
-                    );},),
 
-                ),
-                  BotonNav(etiqueta: "Iniciar Sesion", sig: HomePage())
+                  BotonNav(etiqueta: "Iniciar Sesion", sig: Navbar())
+
                 ],
               ),)
 
