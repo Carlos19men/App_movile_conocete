@@ -42,10 +42,7 @@ class Tusalud extends StatelessWidget {
                 left: 60.0,
                 top: 30.0,
                 child: Row(
-                  children: [
-                    Icon(Icons.),
-                    Text('Conóce tu cuerpo')
-                  ],
+                  children: [Icon(Icons.abc), Text('Conóce tu cuerpo')],
                 )),
           ],
         ),
