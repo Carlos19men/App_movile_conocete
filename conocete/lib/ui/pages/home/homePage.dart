@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'widgets/recordatorios.dart';
+import '../widgest/carousel.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -8,8 +9,9 @@ class HomePage extends StatelessWidget {
     return Container(
         margin: EdgeInsets.all(10.0),
         decoration: BoxDecoration(color: Colors.white),
-        child: Column(children: <Widget>[
-          Center(child: Text(style: TextStyle(fontSize: 24), 'HomePage')),
+        child: ListView(children: <Widget>[
+          Center(child: Text(style: TextStyle(fontSize: 24), 'Novedades')),
+          Carousel(),
           Recordatorio(),
         ]));
   }
