@@ -14,6 +14,9 @@ class Tusalud extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
+
+    List<String> estados = ['Candasa', 'Con dolor', 'Debil'];
+
     return ListView(
       children: [
         //widget del todo el auto examen
@@ -81,6 +84,24 @@ class Tusalud extends StatelessWidget {
         Divider(),
 
         //bloque de como te sientes (por definir)
+
+        Text('¿Como te sientes hoy?'),
+
+        //check bottoms de como te sientes
+        Row(
+          children: estados.map((i) {
+            return Builder(builder: (BuildContext context) {
+              return Container(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [Text(i), Checkbox(value: null, onChanged: null)],
+                ),
+              );
+            });
+          }).toList(),
+        ),
+
+        //grafica (buscar la libreria)
       ],
     );
   }
