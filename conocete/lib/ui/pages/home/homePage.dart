@@ -5,12 +5,21 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Container(
-        margin: EdgeInsets.all(10.0),
-        decoration: BoxDecoration(color: Colors.white),
-        child: Column(children: <Widget>[
-          Center(child: Text(style: TextStyle(fontSize: 24), 'HomePage')),
-          Recordatorio(),
-        ]));
+    return
+      Scaffold(
+        appBar: AppBar(
+          backgroundColor: Theme.of(context).colorScheme.primary,
+          title: const Center(
+            child: Text("Conócete"),
+          ),
+        ),
+        body:Container(
+            margin: EdgeInsets.all(10.0),
+            decoration: BoxDecoration(color: Colors.white),
+            child:
+              Recordatorio(),
+        )
+
+      );
   }
 }

@@ -24,7 +24,7 @@ class TipoUsr extends StatelessWidget {
             height: 200,
             image: AssetImage('assets/eleccion_usr.png'),
           )),
-          CheckBoxApp(),
+          CheckBoxApp(texto1: "UNO",texto2: "DOS",texto3: "TRES"),
         ],
       ),
     );

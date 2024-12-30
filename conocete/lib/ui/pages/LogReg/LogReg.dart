@@ -1,4 +1,5 @@
 import 'package:conocete/ui/pages/home/Home.dart';
+import 'package:conocete/ui/pages/home/homePage.dart';
 import 'package:conocete/ui/pages/widgets/BotonApp.dart';
 import 'package:flutter/material.dart';
 
@@ -133,7 +134,7 @@ class LogState extends StatelessWidget {
                     );},),
 
                 ),
-                  BotonNav(etiqueta: "Iniciar Sesion", sig: Home())
+                  BotonNav(etiqueta: "Iniciar Sesion", sig: HomePage())
                 ],
               ),)
 
