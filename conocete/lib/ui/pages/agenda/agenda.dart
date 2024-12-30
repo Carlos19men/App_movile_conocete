@@ -14,46 +14,49 @@ class Agenda extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Container(
-      margin: EdgeInsets.all(25.0),
-      decoration: BoxDecoration(color: Colors.white),
-      child: Container(
-        decoration: BoxDecoration(color: Colors.pink[100]),
-        child: ListView(
-          children: [
-            //calendario
-            Container(
-              decoration: BoxDecoration(color: Colors.pink[900]),
-            ),
+    return ListView(
+      children: [
+        //calendario
+        Container(
+            width: MediaQuery.of(context).size.width,
+            height: 300.0,
+            margin: EdgeInsets.all(10.0),
+            decoration: BoxDecoration(
+                color: Colors.pink[900],
+                borderRadius: BorderRadius.circular(25.0)),
+            child: Center(child: Text('Calendario'))),
 
-            ElevatedButton(onPressed: null, child: Text('Nuevo recordatorio')),
+        Container(
+            width: 70,
+            height: 50,
+            margin: EdgeInsets.only(left: 25, right: 25),
+            child: ElevatedButton(
+                child: Text('Nuevo Recordatorio'), onPressed: null)),
 
-            Divider(),
+        Divider(),
 
-            Positioned(child: Text('Tareas pendientes')),
+        Positioned(child: Text('Tareas pendientes')),
 
-            Row(
-              children: recordatorios,
-            ),
-
-            Divider(),
-
-            Positioned(child: Text('Tareas de hoy')),
-
-            Row(
-              children: recordatorios,
-            ),
-
-            Divider(),
-
-            Positioned(child: Text('Proximas tareas')),
-
-            Row(
-              children: recordatorios,
-            ),
-          ],
+        Column(
+          children: recordatorios,
         ),
-      ),
+
+        Divider(),
+
+        Positioned(child: Text('Tareas de hoy')),
+
+        Column(
+          children: recordatorios,
+        ),
+
+        Divider(),
+
+        Positioned(child: Text('Proximas tareas')),
+
+        Column(
+          children: recordatorios,
+        ),
+      ],
     );
   }
 }

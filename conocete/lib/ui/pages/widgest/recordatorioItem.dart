@@ -16,7 +16,7 @@ class _RecordatorioItem extends State<RecordatorioItem> {
   bool isCheked = false;
   bool newValue = false;
 
-  TextStyle estiloTarea = const TextStyle(fontSize: 20);
+  TextStyle estiloTarea = const TextStyle(fontSize: 18);
 
   _RecordatorioItem(this.tarea);
 
@@ -24,11 +24,11 @@ class _RecordatorioItem extends State<RecordatorioItem> {
     setState(() {
       if (value) {
         estiloTarea = TextStyle(
-            fontSize: 20,
+            fontSize: 18,
             decoration: TextDecoration.lineThrough,
             color: const Color.fromARGB(98, 0, 0, 0));
       } else {
-        estiloTarea = const TextStyle(fontSize: 20);
+        estiloTarea = const TextStyle(fontSize: 18);
       }
     });
   }
