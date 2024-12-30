@@ -23,6 +23,7 @@ class _Navbar extends State<Navbar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //Barra superior
       appBar: AppBar(
         title: Center(child: Text('Conócete')),
         backgroundColor: Color.fromARGB(255, 255, 167, 221),
@@ -33,7 +34,11 @@ class _Navbar extends State<Navbar> {
           },
         ),
       ),
+
+      //cuerpo
       body: paginas[indexTap],
+
+      //barra inferior de navegacion
       bottomNavigationBar: Theme(
           data: Theme.of(context).copyWith(
               canvasColor: Color.fromARGB(255, 255, 230, 246),
@@ -49,6 +54,31 @@ class _Navbar extends State<Navbar> {
                 BottomNavigationBarItem(
                     icon: Icon(Icons.home), label: 'Tu salud')
               ])),
+
+      endDrawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            DrawerHeader(
+              decoration: BoxDecoration(color: Colors.pink[400]),
+              child: Text('Inicio'),
+            ),
+            ListTile(
+              leading: Icon(Icons.supervised_user_circle_sharp),
+              title: Text('Perfil'),
+            ),
+            ListTile(
+              leading: Icon(Icons.supervised_user_circle_sharp),
+              title: Text('Perfil'),
+            ),
+            ListTile(
+              leading: Icon(Icons.supervised_user_circle_sharp),
+              title: Text('Perfil'),
+            ),
+            Divider(),
+          ],
+        ),
+      ),
     );
   }
 }
