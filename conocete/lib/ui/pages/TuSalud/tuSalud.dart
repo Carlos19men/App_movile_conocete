@@ -34,6 +34,29 @@ class Tusalud extends StatelessWidget {
               margin: EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
             ),
 
+            //texto bloque de texto del auto examen
+            Positioned(
+                left: 30.0,
+                top: 30.0,
+                child: Column(
+                  children: [
+                    TextItem(Icon(Icons.abc), 'Conoce tu cuerpo'),
+                    TextItem(Icon(Icons.abc), 'Conoce tu cuerpo'),
+                    TextItem(Icon(Icons.abc), 'Conoce tu cuerpo')
+                  ],
+                )),
+
+            //imagen de la mujer del auto examen
+
+            Positioned(
+                left: 170,
+                top: 10,
+                child: Image.asset(
+                  'assets/img/mujer_autoexamen.png',
+                  width: 170,
+                  height: 195,
+                )),
+
             // boton de realizar autoexamen
             Positioned(
               left: 20.0,
@@ -58,23 +81,15 @@ class Tusalud extends StatelessWidget {
                 ),
               ),
             ),
-
-            //texto bloque de texto del auto examen
-            Positioned(
-                left: 30.0,
-                top: 30.0,
-                child: Column(
-                  children: [
-                    TextItem(Icon(Icons.abc), 'Conoce tu cuerpo'),
-                    TextItem(Icon(Icons.abc), 'Conoce tu cuerpo'),
-                    TextItem(Icon(Icons.abc), 'Conoce tu cuerpo')
-                  ],
-                )),
           ],
         ),
-        Divider(),
 
-        Positioned(child: Text('Examenes')),
+        Container(
+          margin: EdgeInsets.only(left: 20.0, top: 10.0),
+          child: Text('Examenes'),
+        ),
+
+        Divider(),
 
         //bloque de ultimo autoexamen
         TextBlock('Ultimo auto-examen: ', 'hace dos semanas', Colors.red),
@@ -86,26 +101,34 @@ class Tusalud extends StatelessWidget {
 
         //bloque de como te sientes (por definir)
 
-        Text('¿Como te sientes hoy?'),
+        Container(
+          margin: EdgeInsets.only(left: 20.0),
+          child: Text('¿Como te sientes hoy?'),
+        ),
 
-        //check bottoms de como te sientes
-        Row(children: [
-          Container(
-              width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(color: Colors.blue),
-              child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'mal',
-                    ),
-                    Checkbox(
-                      onChanged: null,
-                      hoverColor: Colors.pink[300],
-                      value: false,
-                    )
-                  ]))
-        ]),
+        Container(
+            margin: EdgeInsets.only(left: 20.0),
+            child: CheckboxListTile.adaptive(
+              value: false,
+              onChanged: null,
+              title: Text('Con dolor '),
+            )),
+
+        Container(
+            margin: EdgeInsets.only(left: 20.0),
+            child: CheckboxListTile.adaptive(
+              value: false,
+              onChanged: null,
+              title: Text('Fatiga'),
+            )),
+
+        Container(
+            margin: EdgeInsets.only(left: 20.0),
+            child: CheckboxListTile.adaptive(
+              value: false,
+              onChanged: null,
+              title: Text('Cansada'),
+            )),
 
         //grafica (buscar la libreria)
       ],

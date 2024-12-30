@@ -29,29 +29,6 @@ class _Navbar extends State<Navbar> {
         backgroundColor: Color.fromARGB(255, 255, 167, 221),
       ),
 
-      //cuerpo
-      body: Container(
-        margin: EdgeInsets.all(8.0),
-        child: paginas[indexTap],
-      ),
-
-      //barra inferior de navegacion
-      bottomNavigationBar: Theme(
-          data: Theme.of(context).copyWith(
-              canvasColor: Color.fromARGB(255, 255, 230, 246),
-              primaryColor: Color.fromARGB(255, 255, 167, 221)),
-          child: BottomNavigationBar(
-              onTap: onTapTapped,
-              currentIndex: indexTap,
-              items: [
-                BottomNavigationBarItem(
-                    icon: Icon(Icons.home), label: 'Inicio'),
-                BottomNavigationBarItem(
-                    icon: Icon(Icons.add_a_photo), label: 'Agenda'),
-                BottomNavigationBarItem(
-                    icon: Icon(Icons.home), label: 'Tu salud')
-              ])),
-
       endDrawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -76,6 +53,28 @@ class _Navbar extends State<Navbar> {
           ],
         ),
       ),
+      //cuerpo
+      body: Container(
+        margin: EdgeInsets.all(8.0),
+        child: paginas[indexTap],
+      ),
+
+      //barra inferior de navegacion
+      bottomNavigationBar: Theme(
+          data: Theme.of(context).copyWith(
+              canvasColor: Color.fromARGB(255, 255, 230, 246),
+              primaryColor: Color.fromARGB(255, 255, 167, 221)),
+          child: BottomNavigationBar(
+              onTap: onTapTapped,
+              currentIndex: indexTap,
+              items: [
+                BottomNavigationBarItem(
+                    icon: Icon(Icons.home), label: 'Inicio'),
+                BottomNavigationBarItem(
+                    icon: Icon(Icons.add_a_photo), label: 'Agenda'),
+                BottomNavigationBarItem(
+                    icon: Icon(Icons.home), label: 'Tu salud')
+              ])),
     );
   }
 }
