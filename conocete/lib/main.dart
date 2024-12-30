@@ -1,6 +1,6 @@
 import 'package:conocete/ui/pages/Onboarding/Onboarding.dart.';
 import 'package:flutter/material.dart';
-
+import 'ui/pages/widgest/NavBar.dart';
 
 void main() {
   runApp(const MyApp());
