@@ -55,7 +55,7 @@ class _Navbar extends State<Navbar> {
               title: Text('Mis documentos'),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => DocumentPage()));
+                    MaterialPageRoute(builder: (context) => Documentos()));
               },
             ),
             ListTile(
