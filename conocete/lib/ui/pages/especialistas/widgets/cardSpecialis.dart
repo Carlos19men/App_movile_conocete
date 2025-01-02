@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../especialista.dart';
 
 class Cardspecialis extends StatefulWidget {
   const Cardspecialis({super.key});
@@ -13,16 +14,22 @@ class _CardspecialisState extends State<Cardspecialis> {
     return Card(
       child: Container(
           margin: EdgeInsets.all(15.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text('Especialista 1'),
-              Image.asset(
-                'assets/img/mujer_autoexamen1.png',
-                width: 60,
-                height: 70,
-              )
-            ],
+          child: InkWell(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Especialista()));
+            },
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('Especialista 1'),
+                Image.asset(
+                  'assets/img/mujer_autoexamen1.png',
+                  width: 60,
+                  height: 70,
+                )
+              ],
+            ),
           )),
     );
   }

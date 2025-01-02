@@ -97,14 +97,14 @@ class Tusalud extends StatelessWidget {
         //bloque de proximo autoexamen
         TextBlock('Proximo auto-examen: ', 'Mañana', Colors.black),
 
-        Divider(),
-
         //bloque de como te sientes (por definir)
 
         Container(
           margin: EdgeInsets.only(left: 20.0),
           child: Text('¿Como te sientes hoy?'),
         ),
+
+        Divider(),
 
         Container(
             margin: EdgeInsets.only(left: 20.0),
