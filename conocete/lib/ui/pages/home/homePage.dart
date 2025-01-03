@@ -1,7 +1,7 @@
-import 'package:conocete/ui/pages/widgest/NavBar.dart';
+import 'package:conocete/ui/pages/widgets/NavBar.dart';
 import 'package:flutter/material.dart';
 import 'widgets/recordatorios.dart';
-import '../widgest/carousel.dart';
+import '../widgets/carousel.dart';
 
 class HomePage extends StatelessWidget {
   @override

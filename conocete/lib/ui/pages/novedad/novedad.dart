@@ -11,7 +11,9 @@ class Novedad extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: AppBar(
+
         title: Center(child: Text('Conócete')),
         backgroundColor: Color.fromARGB(255, 255, 167, 221),
       ),

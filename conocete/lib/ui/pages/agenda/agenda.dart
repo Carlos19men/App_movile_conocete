@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../widgest/recordatorioItem.dart';
+import '../widgets/recordatorioItem.dart';
 
 // ignore: must_be_immutable
 class Agenda extends StatelessWidget {

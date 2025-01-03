@@ -34,7 +34,7 @@ class _Navbar extends State<Navbar> {
           padding: EdgeInsets.zero,
           children: [
             DrawerHeader(
-              decoration: BoxDecoration(color: Colors.pink[400]),
+              decoration: BoxDecoration(color: Theme.of(context).primaryColor),
               child: Text('Inicio'),
             ),
             ListTile(

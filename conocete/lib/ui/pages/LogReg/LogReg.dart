@@ -1,7 +1,7 @@
 
 import 'package:conocete/ui/pages/home/homePage.dart';
 
-import 'package:conocete/ui/pages/widgest/NavBar.dart';
+import 'package:conocete/ui/pages/widgets/NavBar.dart';
 
 import 'package:conocete/ui/pages/widgets/BotonApp.dart';
 import 'package:flutter/material.dart';
@@ -130,7 +130,9 @@ class LogState extends StatelessWidget {
                       ),
                     ),
                   ),
-
+                SizedBox(
+                  height: altura * 0.10,
+                  width: anchura *  0.7,),
                   BotonNav(etiqueta: "Iniciar Sesion", sig: Navbar())
 
                 ],

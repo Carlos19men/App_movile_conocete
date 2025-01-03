@@ -1,6 +1,7 @@
 import 'package:conocete/ui/pages/Onboarding/Onboarding.dart.';
+import 'package:conocete/ui/pages/chatbot/chatbot.dart';
 import 'package:flutter/material.dart';
-import 'ui/pages/widgest/NavBar.dart';
+import 'ui/pages/widgets/NavBar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,6 +27,13 @@ class MyApp extends StatelessWidget {
       title: 'App Conócete',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        textTheme: TextTheme(
+          headlineLarge: TextStyle(
+            fontSize: 25,
+            color: grisOscuro,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         colorScheme: ColorScheme(
             brightness: Brightness.light,
             primary: rosaFuerte,
