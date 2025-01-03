@@ -132,9 +132,14 @@ class LogState extends StatelessWidget {
                   ),
                 SizedBox(
                   height: altura * 0.10,
-                  width: anchura *  0.7,),
-                  BotonNav(etiqueta: "Iniciar Sesion", sig: Navbar())
+                  width: anchura *  0.7,
+                  child: TextButton(child: Text("Olvido la contraseña?",style:TextStyle(color: Colors.black)),onPressed:(){ Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => HomePage() as Widget),
+                  );},),),
 
+                SizedBox(
+                 child:BotonNav(etiqueta: "Iniciar Sesion", sig: Navbar())
+                ),
                 ],
               ),)
 

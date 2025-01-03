@@ -1,3 +1,4 @@
+import 'package:conocete/ui/pages/home/homePage.dart';
 import 'package:conocete/ui/pages/test/siguientes/Test2.dart';
 import 'package:conocete/ui/pages/tipoUsr/TipoUsr.dart';
 import 'package:flutter/material.dart';
@@ -28,7 +29,7 @@ class Test extends StatelessWidget {
         body:Center(child:
         Column(
           children: [
-            Image(image: AssetImage('assets/logo_app.png'),width:altura*0.3,),
+            Image(image: AssetImage('assets/logo_app.png'),width:altura*0.2,),
 
             SizedBox(
               width: anchura*0.8,
@@ -43,8 +44,15 @@ class Test extends StatelessWidget {
               height: altura * 0.10,
               width: anchura *  0.7,),
 
-            BotonDoble(etiqueta: "anterior", sig: Test2(), etiqueta2: 'siguiente', ant: TipoUsr(),)
+            BotonDoble(etiqueta: "anterior", sig: Test2(), etiqueta2: 'siguiente', ant: TipoUsr(),),
+            SizedBox(
+              height: altura * 0.10,
+              width: anchura *  0.7,
+              child: TextButton(child: Text("Omitir?",style:TextStyle(color: Colors.black)),onPressed:(){ Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => HomePage() as Widget),
+              );},),
 
+            ),
                   ],
 
           ),

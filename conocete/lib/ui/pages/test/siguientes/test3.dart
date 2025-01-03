@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 
 import '../../widgets/boton_doble.dart';
 
-class Test2 extends StatelessWidget {
-  const Test2({super.key});
+class Test3 extends StatelessWidget {
+  const Test3({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,16 +28,16 @@ class Test2 extends StatelessWidget {
       body:Center(child:
       Column(
         children: [
-        SizedBox(
-        height: altura*0.05),
-        SizedBox(
-          width: anchura*0.8,
-          child: Text( style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          )
-              ,'Vamos a conocerte un poco'),
-        ),
+          SizedBox(
+              height: altura*0.05),
+          SizedBox(
+            width: anchura*0.8,
+            child: Text( style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            )
+                ,'Vamos a conocerte un poco'),
+          ),
           SizedBox(
               height: altura*0.05),
           SizedBox(
@@ -49,11 +49,11 @@ class Test2 extends StatelessWidget {
                 ,'Cual es tu edad?'),
           ),
           Image(image: AssetImage('assets/img/t2.png'),width:anchura*0.8,),
-        Slider(value: x  , onChanged:(valor) => x=valor,divisions: 10,label: "$x",max: 100,),
-        SizedBox(
-          child: Text("Edad: $x"),
-        ),
-        BotonDoble(etiqueta: "Atras", sig: Test(), etiqueta2: "Siguiente", ant: Test())
+          Slider(value: x  , onChanged:(valor) => x=valor,divisions: 10,label: "$x",max: 100,),
+          SizedBox(
+            child: Text("Edad: $x"),
+          ),
+          BotonDoble(etiqueta: "Atras", sig: Test(), etiqueta2: "Siguiente", ant: Test())
 
         ],
 
