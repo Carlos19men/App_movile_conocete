@@ -1,12 +1,17 @@
 import 'package:conocete/ui/pages/test/Test.dart';
-import 'package:conocete/ui/pages/tipoUsr/TipoUsr.dart';
+import 'package:conocete/ui/pages/test/siguientes/test3.dart';
 import 'package:flutter/material.dart';
-
 import '../../widgets/boton_doble.dart';
 
-class Test2 extends StatelessWidget {
+class Test2 extends StatefulWidget {
   const Test2({super.key});
 
+  @override
+  State<Test2> createState() => _Test2State();
+}
+
+class _Test2State extends State<Test2> {
+  double x = 0;
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -15,7 +20,7 @@ class Test2 extends StatelessWidget {
     // ignore: unused_local_variable
     final anchura = MediaQuery.of(context).size.width;
 
-    double x = 10;
+
 
     return Scaffold(
       appBar: AppBar(
@@ -25,39 +30,60 @@ class Test2 extends StatelessWidget {
         ),
         titleTextStyle: Theme.of(context).textTheme.headlineLarge,
       ),
-      body:Center(child:
-      Column(
-        children: [
-        SizedBox(
-        height: altura*0.05),
-        SizedBox(
-          width: anchura*0.8,
-          child: Text( style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          )
-              ,'Vamos a conocerte un poco'),
-        ),
-          SizedBox(
-              height: altura*0.05),
-          SizedBox(
-            width: anchura*0.8,
-            child: Text( style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            )
-                ,'Cual es tu edad?'),
-          ),
-          Image(image: AssetImage('assets/img/t2.png'),width:anchura*0.8,),
-        Slider(value: x  , onChanged:(valor) => x=valor,divisions: 10,label: "$x",max: 100,),
-        SizedBox(
-          child: Text("Edad: $x"),
-        ),
-        BotonDoble(etiqueta: "Atras", sig: Test(), etiqueta2: "Siguiente", ant: Test())
+      body: Center(
+        child: Column(
+          children: [
+            SizedBox(height: altura * 0.05),
+            SizedBox(
+              width: anchura * 0.8,
+              child: Text(
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  'Vamos a conocerte un poco'),
+            ),
+            SizedBox(height: altura * 0.05),
+            SizedBox(
+              width: anchura * 0.8,
+              child: Text(
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  'Cual es tu edad?'),
+            ),
+            Image(
+              image: AssetImage('assets/img/t2.png'),
+              width: anchura * 0.8,
+            ),
+            Slider(
+              value: x,
+              onChanged: (valor) {
+                setState(() => x = valor);
+              },
+              min: 0,
+              max: 100,
+              divisions: 100,
+              label: "$x",
+            ),
 
-        ],
-
-      ),
+            SizedBox(
+              child: Text(
+                "Edad: $x",
+                style: TextStyle(fontSize: 30),
+              ),
+            ),
+            SizedBox(
+              height: altura * 0.2,
+            ),
+            BotonDoble(
+                etiqueta: "Atras",
+                ant: Test(),
+                etiqueta2: "Siguiente",
+                sig: Test3(),)
+          ],
+        ),
       ),
     );
   }

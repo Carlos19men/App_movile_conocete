@@ -1,4 +1,3 @@
-
 import 'package:conocete/ui/pages/test/Test.dart';
 import 'package:conocete/ui/pages/widgets/BotonApp.dart';
 import 'package:conocete/ui/pages/widgets/CheckBoxApp.dart';
@@ -15,14 +14,11 @@ class TipoUsr extends StatefulWidget {
 }
 
 class _TipoUsrState extends State<TipoUsr> {
-
   String textoTipo = " ";
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-
-
 
     void updateTextoTipo(String nuevo) {
       setState(() {
@@ -38,7 +34,7 @@ class _TipoUsrState extends State<TipoUsr> {
         ),
         titleTextStyle: Theme.of(context).textTheme.headlineLarge,
       ),
-      drawer:GroqExample() ,
+      drawer: GroqExample(),
       body: Column(
         children: [
           Text(
@@ -58,7 +54,7 @@ class _TipoUsrState extends State<TipoUsr> {
               texto1: "Sin diagnóstico",
               texto2: "Diagnosticada recientemente",
               texto3: "Bajo tratamiento",
-              onTextoTipoChanged: updateTextoTipo ),
+              onTextoTipoChanged: updateTextoTipo),
           BotonNav(etiqueta: "siguiente", sig: Test()),
         ],
       ),
