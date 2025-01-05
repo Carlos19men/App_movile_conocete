@@ -24,7 +24,7 @@ class Agenda extends StatelessWidget {
             decoration: BoxDecoration(
                 color: Colors.pink[900],
                 borderRadius: BorderRadius.circular(25.0)),
-            child: Center(child: Text('Calendario'))),
+            child: TableCalendar()),
 
         Container(
             width: 70,
