@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'package:conocete/ui/pages/novedad/widgets/novedad.dart';
 import 'package:conocete/ui/pages/widgets/carousel.dart';
-import 'package:conocete/ui/pages/widgets/carouselItem.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
