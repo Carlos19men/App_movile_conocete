@@ -5,8 +5,8 @@ class Bodymargin extends StatelessWidget {
   Widget pantalla;
 
   Bodymargin(
-    this.pantalla,
-  );
+      this.pantalla,
+      );
 
   @override
   Widget build(BuildContext context) {

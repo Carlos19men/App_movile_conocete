@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/cust_appbar.dart';
+
 class Autoexamen extends StatefulWidget {
   const Autoexamen({super.key});
 
@@ -16,10 +18,7 @@ class _AutoexamenState extends State<Autoexamen> {
       //carrusel de fotos
 
       //Barra superior
-      appBar: AppBar(
-        title: Center(child: Text('Conócete')),
-        backgroundColor: Color.fromARGB(255, 255, 167, 221),
-      ),
+      appBar: Custom_appbar(),
 
       //cuerpo
       body: Container(

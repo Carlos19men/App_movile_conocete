@@ -4,6 +4,7 @@ import '../agenda/agenda.dart';
 import '../home/homePage.dart';
 import 'MenuDrawer.dart';
 import 'bodyMargin.dart';
+import 'cust_appbar.dart';
 
 class Navbar extends StatefulWidget {
   State<StatefulWidget> createState() {
@@ -26,10 +27,7 @@ class _Navbar extends State<Navbar> {
   Widget build(BuildContext context) {
     return Scaffold(
       //Barra superior
-      appBar: AppBar(
-        title: Center(child: Text('Conócete')),
-        backgroundColor: Color.fromARGB(255, 255, 167, 221),
-      ),
+      appBar: Custom_appbar(),
 
       endDrawer: MenuDrawer(),
       //cuerpo
