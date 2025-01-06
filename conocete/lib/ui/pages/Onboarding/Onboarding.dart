@@ -1,5 +1,6 @@
 import 'package:conocete/ui/pages/LogReg/LogReg.dart';
 import 'package:conocete/ui/pages/widgets/BotonApp.dart';
+import 'package:conocete/ui/pages/widgets/cust_appbar.dart';
 import 'package:flutter/material.dart';
 
 
@@ -15,18 +16,11 @@ class Onboarding extends StatelessWidget {
     final anchura = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.primary,
-        title: const Center(
-          child: Text("Conócete"),
-        ),
-        titleTextStyle: Theme.of(context).textTheme.headlineLarge,
-      ),
-        backgroundColor: Theme.of(context).primaryColor,
+      appBar: Custom_appbar(),
       body:Stack(
         children: [
-          Center( heightFactor: 1.5,
-          child: Image(image: AssetImage('assets/logo_app.png'),width:altura*0.2,),
+          Center( heightFactor: 1.0,
+          child: Image(image: AssetImage('assets/logo_app.png'),height:altura*0.25,),
         ),
           Column(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -43,11 +37,12 @@ class Onboarding extends StatelessWidget {
                           image: AssetImage('assets/chica_onboard.png'),
                         ),
                       ),
-                      BotonNav(etiqueta: "Iniciar", sig: LogReg())
+                      BotonNav(etiqueta: "Iniciar", sig: LogReg(),hacer:(){})
                     ]),
               ]),
         ],
       ),
+      backgroundColor: Theme.of(context).colorScheme.primary,
 
     );
   }

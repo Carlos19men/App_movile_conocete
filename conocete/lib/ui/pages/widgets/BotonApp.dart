@@ -3,15 +3,19 @@ import 'package:flutter/material.dart';
 class BotonNav extends StatelessWidget {
 
   final String etiqueta;
-
-  final Object sig;
+  final VoidCallback hacer;
+  final Widget sig;
 
   const BotonNav(
       {super.key,
       required this.etiqueta,
-      required this.sig});
+      required this.sig, required this.hacer});
+
+
 
   @override
+
+
   Widget build(BuildContext context) {
     return Center(
       child: TextButton(
@@ -32,8 +36,9 @@ class BotonNav extends StatelessWidget {
             ),
           ),
           onPressed: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => sig as Widget),
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => sig),
             );
           },
           child:  Text(

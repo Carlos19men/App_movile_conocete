@@ -1,11 +1,13 @@
 import 'package:conocete/ui/pages/home/homePage.dart';
 import 'package:conocete/ui/pages/test/siguientes/Test2.dart';
 import 'package:conocete/ui/pages/tipoUsr/TipoUsr.dart';
+import 'package:conocete/ui/pages/widgets/botonasistente.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/BotonApp.dart';
 import '../widgets/NavBar.dart';
 import '../widgets/boton_doble.dart';
+import '../widgets/cust_appbar.dart';
 
 class Test extends StatelessWidget {
   const Test({super.key});
@@ -19,13 +21,7 @@ class Test extends StatelessWidget {
     final anchura = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.primary,
-        title: const Center(
-          child: Text("Conócete"),
-        ),
-        titleTextStyle: Theme.of(context).textTheme.headlineLarge,
-      ),
+      appBar: Custom_appbar(),
       body: Center(
         child: Column(
           children: [
@@ -42,7 +38,7 @@ class Test extends StatelessWidget {
                   '¡Hola! Queremos que tu experiencia sea única y especial. Para lograrlo, necesitamos conocer un poquito más sobre ti. ¡No te preocupes! Toda la información que nos compartas será tratada con total confidencialidad. Tus datos personales están seguros con nosotras. ¡Ayúdanos a conocerte mejor para ofrecerte lo que realmente necesitas!'),
             ),
             BotonDoble(
-              etiqueta: "anterior",
+              etiqueta: "Anterior",
               ant: TipoUsr(),
               etiqueta2: 'siguiente',
               sig: Test2(),
@@ -55,7 +51,7 @@ class Test extends StatelessWidget {
                 onPressed: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                        builder: (context) => HomePage() as Widget),
+                        builder: (context) => Navbar() as Widget),
                   );
                 },
               ),
@@ -63,6 +59,7 @@ class Test extends StatelessWidget {
           ],
         ),
       ),
+      floatingActionButton: Asist(),
     );
   }
 }

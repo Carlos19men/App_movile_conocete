@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../../widgets/boton_doble.dart';
+import '../../widgets/botonasistente.dart';
+import '../../widgets/cust_appbar.dart';
 import 'Test2.dart';
 import 'cuestionario.dart';
 
@@ -14,8 +16,20 @@ class Test3 extends StatefulWidget {
 class _Test3State extends State<Test3> {
   String textoemb = "";
 
-  var check1 = true;
+  var check1 = false;
   var check2 = false;
+
+  var rellenar = Column(children: [SizedBox(height:23 ),SizedBox(height: 30,)]);
+
+  void quitar (){
+    rellenar = Column(children: [SizedBox(height:23) ,SizedBox(height: 30,)],);
+  }
+  void mostrar (){
+    rellenar = Column(children: [SizedBox(height:23 ,child:
+      Text("Pregunta del embarazo")),SizedBox(height: 30,child: TextField(),)]);
+
+  }
+
 @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -25,13 +39,7 @@ class _Test3State extends State<Test3> {
     final anchura = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.primary,
-        title: const Center(
-          child: Text("Conócete"),
-        ),
-        titleTextStyle: Theme.of(context).textTheme.headlineLarge,
-      ),
+      appBar: Custom_appbar(),
       body: Center(
         child: Column(
           children: [
@@ -66,9 +74,15 @@ class _Test3State extends State<Test3> {
               children: [
                 Checkbox(value: check1, onChanged:(value) {
                   setState(() {
-                  textoemb = "no, Tabien";
-                  check2=check1;
-                  check1= !check1;
+                    if (textoemb != "Si, he vivido un embarazo"){
+                      textoemb = "Si, he vivido un embarazo";
+                      mostrar();}
+                    else
+                    {textoemb = "No he vivido un embarazo";
+                    quitar();}
+                    check2=check1;
+                    check1= !check1;
+
                   });
                   }, ),
                 SizedBox(
@@ -76,26 +90,37 @@ class _Test3State extends State<Test3> {
                 ),
                 Checkbox(value: check2, onChanged:(val) {
                   setState(() {
-                    textoemb = "si, Tamal";
+                    if (textoemb != "No he vivido un embarazo"){
+                      textoemb = "No he vivido un embarazo";
+                      quitar();}
+                    else
+                    {textoemb = "Si, he vivido un embarazo";
+                    mostrar();}
                     check1=check2;
                     check2= !check2;
+
                   });
                 }, ),
               ],
             ),
+
             SizedBox(
-              height: altura * 0.3,
+              height: altura * 0.1,
               child: Text(textoemb, style: TextStyle(fontSize: 20)),
             ),
-
+            rellenar,
+            SizedBox(
+              height: altura*0.2,
+            ),
             BotonDoble(
-                etiqueta: "Atras",
+                etiqueta: "Anterior",
                 ant: Test2(),
                 etiqueta2: "Siguiente",
                 sig: Cuestionario())
           ],
         ),
       ),
+      floatingActionButton: Asist(),
     );
   }
 }

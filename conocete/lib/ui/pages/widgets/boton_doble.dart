@@ -6,8 +6,8 @@ class BotonDoble extends StatelessWidget {
 
   final String etiqueta;
   final String etiqueta2;
-  final Object ant;
-  final Object sig;
+  final Widget ant;
+  final Widget sig;
 
 
 
@@ -35,8 +35,9 @@ class BotonDoble extends StatelessWidget {
           ),
         ),
             onPressed: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => ant as Widget),
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ant),
               );
             },
             child:  Text(
@@ -62,8 +63,9 @@ class BotonDoble extends StatelessWidget {
               ),
             ),
             onPressed: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => sig as Widget),
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => sig),
               );
             },
             child:  Text(

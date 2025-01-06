@@ -2,6 +2,8 @@ import 'package:conocete/ui/pages/test/Test.dart';
 import 'package:conocete/ui/pages/test/siguientes/test3.dart';
 import 'package:flutter/material.dart';
 import '../../widgets/boton_doble.dart';
+import '../../widgets/botonasistente.dart';
+import '../../widgets/cust_appbar.dart';
 
 class Test2 extends StatefulWidget {
   const Test2({super.key});
@@ -23,13 +25,7 @@ class _Test2State extends State<Test2> {
 
 
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.primary,
-        title: const Center(
-          child: Text("Conócete"),
-        ),
-        titleTextStyle: Theme.of(context).textTheme.headlineLarge,
-      ),
+      appBar: Custom_appbar(),
       body: Center(
         child: Column(
           children: [
@@ -78,13 +74,14 @@ class _Test2State extends State<Test2> {
               height: altura * 0.2,
             ),
             BotonDoble(
-                etiqueta: "Atras",
+                etiqueta: "Anterior",
                 ant: Test(),
                 etiqueta2: "Siguiente",
                 sig: Test3(),)
           ],
         ),
       ),
+      floatingActionButton: Asist(),
     );
   }
 }

@@ -1,10 +1,12 @@
 import 'package:conocete/ui/pages/test/Test.dart';
 import 'package:conocete/ui/pages/widgets/BotonApp.dart';
 import 'package:conocete/ui/pages/widgets/CheckBoxApp.dart';
+import 'package:conocete/ui/pages/widgets/botonasistente.dart';
 import 'package:flutter/material.dart';
 import 'package:groq/groq.dart';
 
 import '../chatbot/chatbot.dart';
+import '../widgets/cust_appbar.dart';
 
 class TipoUsr extends StatefulWidget {
   const TipoUsr({super.key});
@@ -27,14 +29,7 @@ class _TipoUsrState extends State<TipoUsr> {
     }
 
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.primary,
-        title: const Center(
-          child: Text("Conócete"),
-        ),
-        titleTextStyle: Theme.of(context).textTheme.headlineLarge,
-      ),
-      drawer: GroqExample(),
+      appBar:  Custom_appbar(),
       body: Column(
         children: [
           Text(
@@ -55,9 +50,10 @@ class _TipoUsrState extends State<TipoUsr> {
               texto2: "Diagnosticada recientemente",
               texto3: "Bajo tratamiento",
               onTextoTipoChanged: updateTextoTipo),
-          BotonNav(etiqueta: "siguiente", sig: Test()),
+          BotonNav(etiqueta: "siguiente", sig: Test(),hacer:(){}),
         ],
       ),
+      floatingActionButton: Asist(),
     );
   }
 }

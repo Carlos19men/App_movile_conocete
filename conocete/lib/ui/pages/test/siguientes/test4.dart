@@ -1,8 +1,10 @@
 import 'package:conocete/ui/pages/test/Test.dart';
 import 'package:conocete/ui/pages/tipoUsr/TipoUsr.dart';
+import 'package:conocete/ui/pages/widgets/botonasistente.dart';
 import 'package:flutter/material.dart';
 
 import '../../widgets/boton_doble.dart';
+import '../../widgets/cust_appbar.dart';
 
 class Test4 extends StatelessWidget {
   const Test4({super.key});
@@ -18,13 +20,7 @@ class Test4 extends StatelessWidget {
     double x = 10;
 
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.primary,
-        title: const Center(
-          child: Text("Conócete"),
-        ),
-        titleTextStyle: Theme.of(context).textTheme.headlineLarge,
-      ),
+      appBar: Custom_appbar(),
       body:Center(child:
       Column(
         children: [
@@ -59,6 +55,7 @@ class Test4 extends StatelessWidget {
 
       ),
       ),
+      floatingActionButton: Asist(),
     );
   }
 }

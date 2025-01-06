@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:groq/groq.dart';
 
+import '../widgets/cust_appbar.dart';
+
 class GroqExample extends StatelessWidget {
   const GroqExample({super.key});
 
@@ -61,11 +63,7 @@ class ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Center(child: Text('Conócete')),
-        backgroundColor: Theme.of(context).primaryColor,
-        actions: [_buildClearChatButton()],
-      ),
+      appBar: Custom_appbar(),
       body: SafeArea(
         child: Column(
           children: <Widget>[
