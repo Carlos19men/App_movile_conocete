@@ -43,13 +43,12 @@ def WSunifemmen(driver):
         imagen = driver.find_element(By.CSS_SELECTOR,'.et_pb_title_featured_container img').get_attribute('src')
         
         #Obtenemos los tres primeros parrafos de cada uno  
-        parrafoWeb = driver.find_elements(By.TAG_NAME,'p')
+        parrafosWeb = driver.find_elements(By.TAG_NAME,'p')
 
-        #convertir a texto
+        #convertir a textO
+        
+        parrafos = parrafosWeb[0].text + '\n' + parrafosWeb[1].text + '\n'+ parrafosWeb[2].text + '\n'+ parrafosWeb[3].text + '\n\n';
 
-        parrafos = []
-        for texto in parrafoWeb:
-            parrafos.append(texto.text + '\n\n')
 
         #agregamos la información al objeto 
         items.append({
@@ -122,10 +121,7 @@ def breastcancer(driver):
         
         parrafosWeb = driver.find_elements(By.CSS_SELECTOR,'.AdsContent p')
 
-        parrafos = []
-        #Convertirlos a texto 
-        for texto in parrafosWeb:
-            parrafos.append(texto.text + '\n\n')
+        parrafos = parrafosWeb[0].text + '\n' + parrafosWeb[1].text + '\n'+ parrafosWeb[2].text + '\n'+ parrafosWeb[3].text + '\n\n';
 
         #agregamos a la data 
         data.append({

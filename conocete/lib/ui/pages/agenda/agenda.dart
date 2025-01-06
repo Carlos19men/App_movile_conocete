@@ -1,7 +1,7 @@
 import 'package:conocete/ui/pages/agenda/widgets/event.dart';
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
-import '../widgest/recordatorioItem.dart';
+import '../widgets/recordatorioItem.dart';
 
 // ignore: must_be_immutable
 class Agenda extends StatefulWidget {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../widgest/bodyMargin.dart';
+import '../widgets/bodyMargin.dart';
 
 class Especialista extends StatelessWidget {
   const Especialista({super.key});
