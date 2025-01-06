@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import '../../widgest/recordatorioItem.dart';
+import '../../widgets/recordatorioItem.dart';
 
 class Recordatorio extends StatelessWidget {
+  const Recordatorio({super.key});
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
