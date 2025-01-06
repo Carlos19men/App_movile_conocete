@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../widgest/bodyMargin.dart';
+import '../widgets/bodyMargin.dart';
 import 'newDocumento.dart';
 
 class Documentos extends StatelessWidget {
