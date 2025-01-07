@@ -47,7 +47,7 @@ def WSunifemmen(driver):
 
         #convertir a textO
         
-        parrafos = parrafosWeb[0].text + '\n' + parrafosWeb[1].text + '\n'+ parrafosWeb[2].text + '\n'+ parrafosWeb[3].text + '\n\n';
+        parrafos = parrafosWeb[0].text + '\n' + parrafosWeb[1].text + '\n'+ parrafosWeb[2].text + '\n\n';
 
 
         #agregamos la información al objeto 
@@ -121,7 +121,7 @@ def breastcancer(driver):
         
         parrafosWeb = driver.find_elements(By.CSS_SELECTOR,'.AdsContent p')
 
-        parrafos = parrafosWeb[0].text + '\n' + parrafosWeb[1].text + '\n'+ parrafosWeb[2].text + '\n'+ parrafosWeb[3].text + '\n\n';
+        parrafos = parrafosWeb[0].text + '\n' + parrafosWeb[1].text + '\n'+ parrafosWeb[2].text + '\n\n';
 
         #agregamos a la data 
         data.append({
