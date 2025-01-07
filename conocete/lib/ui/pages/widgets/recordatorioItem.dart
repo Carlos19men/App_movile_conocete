@@ -42,7 +42,7 @@ class _RecordatorioItem extends State<RecordatorioItem> {
         decoration: BoxDecoration(
           color: const Color.fromARGB(152, 255, 255, 255),
           border: Border(
-              bottom: BorderSide(color: Color.fromARGB(200, 255, 167, 221))),
+              bottom: BorderSide(color: Theme.of(context).primaryColor)),
         ),
         child: Container(
             margin: EdgeInsets.all(25.0),

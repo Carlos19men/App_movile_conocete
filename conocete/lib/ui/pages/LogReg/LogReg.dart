@@ -1,8 +1,12 @@
 import 'package:conocete/ui/pages/widgets/NavBar.dart';
 import 'package:conocete/ui/pages/widgets/BotonApp.dart';
 import 'package:flutter/material.dart';
+import '../../../data/login.dart';
+import '../../../data/register.dart';
 import '../tipoUsr/TipoUsr.dart';
 import 'package:conocete/ui/pages/widgets/cust_appbar.dart';
+
+import '../widgets/boton_simple.dart';
 
 class LogReg extends StatefulWidget {
   const LogReg({super.key});
@@ -37,6 +41,8 @@ class LogState extends StatelessWidget {
   Widget build(BuildContext context) {
     final altura = MediaQuery.of(context).size.height;
     final anchura = MediaQuery.of(context).size.width;
+    var contrasenaController = TextEditingController();
+    var emailController = TextEditingController();
 
     return Scaffold(
       appBar: Custom_appbar(),
@@ -102,20 +108,21 @@ class LogState extends StatelessWidget {
                       SizedBox(
                         height: altura * 0.10,
                         width: anchura * 0.7,
-                        child: TextField(
+                        child: TextField(controller:emailController,
                           decoration: InputDecoration(
                             border: OutlineInputBorder(borderSide: BorderSide(width: 5)),
-                            labelText: 'Usuario',
+                            labelText: 'Correo',
                           ),
                         ),
                       ),
                       SizedBox(
                         height: altura * 0.10,
                         width: anchura * 0.7,
-                        child: TextField(
+                        child: TextField(controller: contrasenaController = TextEditingController(),
                           decoration: InputDecoration(
                             border: OutlineInputBorder(borderSide: BorderSide(width: 5)),
                             labelText: 'Contraseña',
+
                           ),
                         ),
                       ),
@@ -135,10 +142,9 @@ class LogState extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        child: BotonNav(
+                        child: BotonSimple(
                             etiqueta: "Iniciar Sesion",
-                            sig: Navbar(),
-                            hacer: () {}),
+                            hacer: () {login(emailController,contrasenaController);}),
                       ),
                     ],
                   ),
@@ -162,6 +168,9 @@ class RegState extends StatelessWidget {
   Widget build(BuildContext context) {
     final altura = MediaQuery.of(context).size.height;
     final anchura = MediaQuery.of(context).size.width;
+    var cont2Controller = TextEditingController();
+    var contrasenaController = TextEditingController();
+    var emailController = TextEditingController();
 
     return Scaffold(
       appBar: Custom_appbar(),
@@ -225,7 +234,7 @@ class RegState extends StatelessWidget {
                       SizedBox(
                         height: altura * 0.10,
                         width: anchura * 0.7,
-                        child: TextField(
+                        child: TextField(controller:emailController,
                           decoration: InputDecoration(
                             border: OutlineInputBorder(borderSide: BorderSide(width: 5)),
                             labelText: 'Correo',
@@ -235,7 +244,7 @@ class RegState extends StatelessWidget {
                       SizedBox(
                         height: altura * 0.10,
                         width: anchura * 0.7,
-                        child: TextField(
+                        child: TextField(controller:contrasenaController,
                           decoration: InputDecoration(
                             border: OutlineInputBorder(borderSide: BorderSide(width: 5)),
                             labelText: 'Contraseña',
@@ -245,17 +254,16 @@ class RegState extends StatelessWidget {
                       SizedBox(
                         height: altura * 0.10,
                         width: anchura * 0.7,
-                        child: TextField(
+                        child: TextField(controller:cont2Controller,
                           decoration: InputDecoration(
                             border: OutlineInputBorder(borderSide: BorderSide(width: 5)),
                             labelText: 'Confirmar Contraseña',
                           ),
                         ),
                       ),
-                      BotonNav(
+                      BotonSimple(
                           etiqueta: "Registrarse",
-                          sig: TipoUsr(),
-                          hacer: () {}),
+                          hacer: () {register(emailController,contrasenaController,cont2Controller);}),
                     ],
                   ),
                 )
