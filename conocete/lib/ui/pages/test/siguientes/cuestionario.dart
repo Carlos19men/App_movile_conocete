@@ -9,15 +9,21 @@ class Cuestionario extends StatelessWidget {
   const Cuestionario({super.key});
 
   @override
+
   Widget build(BuildContext context) {
+    var altura = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: Custom_appbar(),
       body: Center(
+
         child: ListView(
           padding: EdgeInsets.only(),
           children: [
+            SizedBox(
+              height: altura *0.1,
+            ),
             Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text("op1"),
                 Checkbox(
@@ -27,7 +33,7 @@ class Cuestionario extends StatelessWidget {
               ],
             ),
             Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text("op2"),
                 Checkbox(
@@ -37,7 +43,7 @@ class Cuestionario extends StatelessWidget {
               ],
             ),
             Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text("op3"),
                 Checkbox(
@@ -47,7 +53,7 @@ class Cuestionario extends StatelessWidget {
               ],
             ),
             Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text("op4"),
                 Checkbox(
@@ -57,7 +63,7 @@ class Cuestionario extends StatelessWidget {
               ],
             ),
             Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text("op5"),
                 Checkbox(
@@ -65,6 +71,9 @@ class Cuestionario extends StatelessWidget {
                   onChanged: (value) {},
                 ),
               ],
+            ),
+            SizedBox(
+              height: altura *0.3,
             ),
             BotonNav(etiqueta: "Comenzar", sig: Navbar(), hacer: () {}),
           ],
