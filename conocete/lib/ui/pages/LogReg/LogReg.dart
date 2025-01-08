@@ -144,7 +144,7 @@ class LogState extends StatelessWidget {
                       SizedBox(
                         child: BotonSimple(
                             etiqueta: "Iniciar Sesion",
-                            hacer: () {login(emailController,contrasenaController);}),
+                            hacer: () {login(emailController,contrasenaController,context);}),
                       ),
                     ],
                   ),
@@ -263,7 +263,7 @@ class RegState extends StatelessWidget {
                       ),
                       BotonSimple(
                           etiqueta: "Registrarse",
-                          hacer: () {register(emailController,contrasenaController,cont2Controller);}),
+                          hacer: () {register(emailController,contrasenaController,cont2Controller,context);}),
                     ],
                   ),
                 )
