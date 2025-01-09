@@ -15,7 +15,7 @@ class NotePage extends StatelessWidget {
       body: Bodymargin(ListView(
         children: [
           //titulo
-          Container(child: Text('Mis notas')),
+          Text('Mis notas'),
 
           //
           TextField(

@@ -5,7 +5,7 @@ import '../widgets/recordatorioItem.dart';
 
 // ignore: must_be_immutable
 class Agenda extends StatefulWidget {
-  Agenda();
+  Agenda({super.key});
   @override
   State<Agenda> createState() => _AgendaState();
 }
@@ -27,6 +27,7 @@ class _AgendaState extends State<Agenda> {
   DateTime? _selectedDay;
 
   //lista de notificaciones de eventos
+  // ignore: unused_field
   late final ValueNotifier<List<Event>> _selectedEvents;
 
   @override
@@ -67,7 +68,7 @@ class _AgendaState extends State<Agenda> {
             margin: EdgeInsets.all(10.0),
             padding: EdgeInsets.all(5.0),
             decoration: BoxDecoration(
-                color: Colors.pink[100],
+                color: Theme.of(context).secondaryHeaderColor,
                 borderRadius: BorderRadius.circular(25.0)),
             child: TableCalendar(
               locale: 'es',

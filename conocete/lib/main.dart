@@ -1,6 +1,8 @@
-import 'package:conocete/ui/pages/Onboarding/Onboarding.dart.';
+import 'package:conocete/ui/pages/Onboarding/onboarding.dart.';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/date_symbol_data_local.dart';
+
 
 void main() {
   initializeDateFormatting().then((_) => runApp(const MyApp()));
@@ -12,9 +14,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var rosaFuerte = const Color.fromARGB(255, 255, 167, 221);
-    var rosaClaro = const Color.fromARGB(255, 255, 230, 246);
+    var rosaClaro = const Color.fromARGB(255, 255, 202, 233);
     var grisOscuro = const Color.fromARGB(255, 46, 46, 46);
-    var rosaError = const Color.fromARGB(255, 255, 150, 210);
+    var rosaError = const Color.fromARGB(255, 174, 25, 70);
 
     // ignore: unused_local_variable
     final altura = MediaQuery.of(context).size.height;
@@ -25,13 +27,8 @@ class MyApp extends StatelessWidget {
       title: 'App Conócete',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        textTheme: TextTheme(
-          headlineLarge: TextStyle(
-            fontSize: 25,
-            color: grisOscuro,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+        textTheme: GoogleFonts.chauPhilomeneOneTextTheme()
+        ,
         colorScheme: ColorScheme(
             brightness: Brightness.light,
             primary: rosaFuerte,
@@ -42,6 +39,7 @@ class MyApp extends StatelessWidget {
             onError: grisOscuro,
             surface: const Color(0xffffffff),
             onSurface: grisOscuro),
+            shadowColor: grisOscuro,
         useMaterial3: true,
         buttonTheme: ButtonThemeData(
           buttonColor: Colors.black,

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class TextItem extends StatelessWidget {
   String texto;
   Icon icono;
-  TextItem(this.icono, this.texto);
+  TextItem(this.icono, this.texto, {super.key});
 
   @override
   Widget build(BuildContext context) {

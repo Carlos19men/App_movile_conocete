@@ -11,7 +11,7 @@ class Recordatorio extends StatelessWidget {
       height: 300.0,
       margin: EdgeInsets.only(right: 10.0, left: 10.0, top: 15.0),
       decoration: BoxDecoration(
-          color: Color.fromARGB(200, 255, 167, 221),
+          color: Theme.of(context).primaryColor,
           borderRadius: BorderRadius.circular(15.0)),
       child: Column(
         children: <Widget>[

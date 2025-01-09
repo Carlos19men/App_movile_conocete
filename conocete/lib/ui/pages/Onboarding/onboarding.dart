@@ -1,5 +1,5 @@
-import 'package:conocete/ui/pages/LogReg/LogReg.dart';
-import 'package:conocete/ui/pages/widgets/BotonApp.dart';
+import 'package:conocete/ui/pages/LogReg/log_reg.dart';
+import 'package:conocete/ui/pages/widgets/boton_app.dart';
 import 'package:conocete/ui/pages/widgets/cust_appbar.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +13,7 @@ class Onboarding extends StatelessWidget {
 
     final altura = MediaQuery.of(context).size.height;
 
+    // ignore: unused_local_variable
     final anchura = MediaQuery.of(context).size.width;
 
     return Scaffold(

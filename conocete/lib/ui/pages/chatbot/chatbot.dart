@@ -87,6 +87,7 @@ class ChatScreenState extends State<ChatScreen> {
     );
   }
 
+  // ignore: unused_element
   Widget _buildClearChatButton() {
     return IconButton(
       onPressed: () {

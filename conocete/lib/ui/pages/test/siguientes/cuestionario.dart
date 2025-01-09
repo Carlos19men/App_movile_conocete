@@ -1,4 +1,4 @@
-import 'package:conocete/ui/pages/widgets/BotonApp.dart';
+import 'package:conocete/ui/pages/widgets/boton_app.dart';
 import 'package:conocete/ui/pages/widgets/botonasistente.dart';
 import 'package:flutter/material.dart';
 

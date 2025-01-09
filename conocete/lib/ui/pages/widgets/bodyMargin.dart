@@ -5,7 +5,7 @@ class Bodymargin extends StatelessWidget {
   Widget pantalla;
 
   Bodymargin(
-      this.pantalla,
+      this.pantalla, {super.key}
       );
 
   @override

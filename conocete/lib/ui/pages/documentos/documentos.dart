@@ -15,7 +15,7 @@ class Documentos extends StatelessWidget {
       body: Bodymargin(ListView(
         children: [
           //titulo
-          Container(child: Text('Mis documentos')),
+         Text('Mis documentos'),
 
           //
           TextField(

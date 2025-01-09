@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Custom_appbar extends StatelessWidget implements PreferredSizeWidget {
-  const Custom_appbar({Key? key}) : super(key: key);
+  const Custom_appbar({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -8,7 +8,7 @@ class Novedad extends StatelessWidget {
 
   String texto = 'esto es un texto mas o menos referente a la novedad';
 
-  Novedad(this.titulo);
+  Novedad(this.titulo, {super.key});
 
   @override
   Widget build(BuildContext context) {

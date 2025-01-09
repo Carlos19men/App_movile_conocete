@@ -1,10 +1,7 @@
-import 'package:conocete/ui/pages/home/homePage.dart';
 import 'package:conocete/ui/pages/test/siguientes/Test2.dart';
-import 'package:conocete/ui/pages/tipoUsr/TipoUsr.dart';
+import 'package:conocete/ui/pages/tipoUsr/tipo_usr.dart';
 import 'package:conocete/ui/pages/widgets/botonasistente.dart';
 import 'package:flutter/material.dart';
-
-import '../widgets/BotonApp.dart';
 import '../widgets/NavBar.dart';
 import '../widgets/boton_doble.dart';
 import '../widgets/cust_appbar.dart';

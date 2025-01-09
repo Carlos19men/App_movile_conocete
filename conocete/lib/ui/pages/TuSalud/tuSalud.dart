@@ -11,6 +11,8 @@ class Tusalud extends StatelessWidget {
     'Hazlo parte de tu rutina'
   ];
 
+  Tusalud({super.key});
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -26,7 +28,7 @@ class Tusalud extends StatelessWidget {
             //fondo
             Container(
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 255, 230, 246),
+                color: Theme.of(context).colorScheme.primary,
                 borderRadius: BorderRadius.circular(25.0),
               ),
               width: MediaQuery.of(context).size.width,
@@ -92,10 +94,10 @@ class Tusalud extends StatelessWidget {
         Divider(),
 
         //bloque de ultimo autoexamen
-        TextBlock('Ultimo auto-examen: ', 'hace dos semanas', Colors.red),
+        TextBlock('Ultimo auto-examen: ', 'hace dos semanas', Theme.of(context).colorScheme.error),
 
         //bloque de proximo autoexamen
-        TextBlock('Proximo auto-examen: ', 'Mañana', Colors.black),
+        TextBlock('Proximo auto-examen: ', 'Mañana', Theme.of(context).colorScheme.primary),
 
         //bloque de como te sientes (por definir)
 

@@ -5,12 +5,12 @@ class TextBlock extends StatelessWidget {
   String informacion, dato;
   Color color;
 
-  TextBlock(this.informacion, this.dato, this.color);
+  TextBlock(this.informacion, this.dato, this.color, {super.key});
 
   @override
   Widget build(BuildContext context) {
     //bloque del texto con los recordatorios
-    return Container(
+    return SizedBox(
       width: MediaQuery.of(context).size.width,
       height: 50.0,
       child: Row(

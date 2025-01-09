@@ -27,7 +27,7 @@ class BotonNav extends StatelessWidget {
                   return Theme.of(context)
                       .colorScheme
                       .tertiary
-                      .withOpacity(0.5);
+                      .withAlpha(128);
                 }
                 return Theme.of(context)
                     .colorScheme

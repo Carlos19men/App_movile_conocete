@@ -1,21 +1,18 @@
 import 'package:conocete/ui/pages/test/Test.dart';
-import 'package:conocete/ui/pages/widgets/BotonApp.dart';
-import 'package:conocete/ui/pages/widgets/CheckBoxApp.dart';
+import 'package:conocete/ui/pages/widgets/boton_app.dart';
+import 'package:conocete/ui/pages/widgets/check_box_app.dart';
 import 'package:conocete/ui/pages/widgets/botonasistente.dart';
 import 'package:flutter/material.dart';
-import 'package:groq/groq.dart';
-
-import '../chatbot/chatbot.dart';
 import '../widgets/cust_appbar.dart';
 
 class TipoUsr extends StatefulWidget {
   const TipoUsr({super.key});
 
   @override
-  _TipoUsrState createState() => _TipoUsrState();
+  TipoUsrState createState() => TipoUsrState();
 }
 
-class _TipoUsrState extends State<TipoUsr> {
+class TipoUsrState extends State<TipoUsr> {
   String textoTipo = " ";
 
   @override

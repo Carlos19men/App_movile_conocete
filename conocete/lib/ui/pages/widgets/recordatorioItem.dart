@@ -4,10 +4,11 @@ import 'package:flutter/material.dart';
 class RecordatorioItem extends StatefulWidget {
   String tarea;
 
-  RecordatorioItem(this.tarea);
+  RecordatorioItem(this.tarea, {super.key});
 
+  @override
   State<StatefulWidget> createState() {
-    return _RecordatorioItem(this.tarea);
+    return _RecordatorioItem(tarea);
   }
 }
 

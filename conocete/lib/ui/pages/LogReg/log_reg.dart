@@ -1,9 +1,9 @@
-import 'package:conocete/ui/pages/widgets/NavBar.dart';
-import 'package:conocete/ui/pages/widgets/BotonApp.dart';
+
+import 'package:conocete/ui/pages/widgets/boton_app.dart';
 import 'package:flutter/material.dart';
 import '../../../data/login.dart';
 import '../../../data/register.dart';
-import '../tipoUsr/TipoUsr.dart';
+
 import 'package:conocete/ui/pages/widgets/cust_appbar.dart';
 
 import '../widgets/boton_simple.dart';

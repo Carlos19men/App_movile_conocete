@@ -6,8 +6,9 @@ import '../novedad/novedadPage.dart';
 class CarouselItem extends StatefulWidget {
   Novedad novedad;
 
-  CarouselItem(this.novedad);
+  CarouselItem(this.novedad, {super.key});
 
+  @override
   State<StatefulWidget> createState() {
     return _CarouselItem(novedad);
   }
@@ -24,7 +25,7 @@ class _CarouselItem extends State<CarouselItem> {
         width: 270,
         height: 230,
         decoration: BoxDecoration(
-            color: Colors.black.withOpacity(0.5),
+            color: Colors.black.withAlpha(128),
             borderRadius: BorderRadius.circular(20.0)),
         child: InkWell(
           onTap: () {
@@ -42,7 +43,7 @@ class _CarouselItem extends State<CarouselItem> {
                   )),
               Container(
                 decoration: BoxDecoration(
-                    color: Colors.black.withOpacity(0.5),
+                    color: Colors.black.withAlpha(128),
                     borderRadius: BorderRadius.circular(20.0)),
               ),
               Positioned(

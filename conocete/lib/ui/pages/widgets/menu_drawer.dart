@@ -15,8 +15,8 @@ class MenuDrawer extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: [
           DrawerHeader(
-            decoration: BoxDecoration(color: Colors.pink[400]),
-            child: Container(height: 60.0, child: Text('Inicio')),
+            decoration: BoxDecoration(color: Theme.of(context).colorScheme.primary),
+            child: SizedBox(height: 60.0, child: Text('Inicio')),
           ),
           ListTile(
             leading: Icon(Icons.supervised_user_circle_sharp),

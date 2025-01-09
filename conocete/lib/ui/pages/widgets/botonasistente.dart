@@ -1,6 +1,8 @@
 import 'package:conocete/ui/pages/chatbot/chatbot.dart';
 import 'package:flutter/material.dart';
 class Asist extends StatelessWidget{
+  const Asist({super.key});
+
 
   @override
   Widget build(BuildContext context) {

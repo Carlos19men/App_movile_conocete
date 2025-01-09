@@ -57,14 +57,13 @@ class _AutoexamenState extends State<Autoexamen> {
           Center(child: Text('¿Apreciaste algo en este paso?')),
 
           //botones de accion
-          Container(
-            child: Row(
+           Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 ElevatedButton(onPressed: () {}, child: Text('Si')),
                 ElevatedButton(onPressed: () {}, child: Text('No'))
               ],
-            ),
+
           ),
 
           //text Fied

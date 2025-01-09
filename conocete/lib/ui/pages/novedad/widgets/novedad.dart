@@ -10,23 +10,23 @@ class Novedad {
     return titulo;
   }
 
-  String get Img {
+  String get img {
     return imgUrl;
   }
 
-  String get Information {
+  String get informacion {
     return information;
   }
 
   void setTitulo(String cadena) {
-    this.titulo = cadena;
+    titulo = cadena;
   }
 
   void setImg(String cadena) {
-    this.imgUrl = cadena;
+    imgUrl = cadena;
   }
 
   void setInformation(String cadena) {
-    this.information = cadena;
+    information = cadena;
   }
 }

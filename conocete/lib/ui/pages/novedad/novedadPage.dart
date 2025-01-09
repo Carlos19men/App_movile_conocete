@@ -6,7 +6,7 @@ import '../widgets/bodyMargin.dart';
 class NovedadPage extends StatelessWidget {
   Novedad novedad;
 
-  NovedadPage(this.novedad);
+  NovedadPage(this.novedad, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class NovedadPage extends StatelessWidget {
       body: Bodymargin(
         ListView(children: [
           //Imagen de la novedad
-          Container(
+          SizedBox(
               width: 150,
               height: 250,
               child: ClipRRect(

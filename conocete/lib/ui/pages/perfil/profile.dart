@@ -22,10 +22,9 @@ class ProfilePage extends StatelessWidget {
               ),
 
               //nombre de usuarios y telefono
-              Container(
-                  child: Column(
+              Column(
                 children: [Text('username'), Text('+580000000')],
-              )),
+              ),
             ],
           ),
 

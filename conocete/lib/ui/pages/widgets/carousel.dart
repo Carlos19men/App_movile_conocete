@@ -1,6 +1,5 @@
 import 'package:conocete/ui/pages/novedad/widgets/novedad.dart';
 import 'package:flutter/material.dart';
-import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'carouselItem.dart';
 
@@ -8,7 +7,7 @@ import 'carouselItem.dart';
 class Carousel extends StatelessWidget {
   List<Novedad> objetos = [];
 
-  Carousel(this.objetos);
+  Carousel(this.objetos, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +15,7 @@ class Carousel extends StatelessWidget {
       options: CarouselOptions(
           height: 250.0,
           aspectRatio: 16 / 9,
-          viewportFraction: 0.80,
+          viewportFraction: 0.70,
           initialPage: 0,
           enableInfiniteScroll: true,
           reverse: false,
