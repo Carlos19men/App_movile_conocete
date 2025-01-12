@@ -37,18 +37,17 @@ dependencies:
   cupertino_icons: ^1.0.8
   carousel_slider: ^5.0.0
   groq: ^1.0.0
-
-  flutter_launcher_icons: ^0.14.2
   table_calendar: ^3.1.3
   intl: ^0.19.0
   supabase_flutter: ^2.8.3
   flutter_dotenv: ^5.2.1
   google_fonts: ^6.2.1
 
+
 dev_dependencies:
+  flutter_launcher_icons: "^0.14.2"
   flutter_test:
     sdk: flutter
-
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
@@ -99,3 +98,29 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+
+flutter_launcher_icons:
+  #  image_path: "assets/icon/icono.png"
+  image_path_android: "assets/icon/icono.png"
+  image_path_ios: "assets/icon/icono.png"
+  android: true # can specify file name here e.g. "ic_launcher"
+  ios: true # can specify file name here e.g. "My-Launcher-Icon"
+  adaptive_icon_background: "assets/icon/icono.png" # only available for Android 8.0 devices and above
+  adaptive_icon_foreground: "assets/icon/icono.png" # only available for Android 8.0 devices and above
+  adaptive_icon_foreground_inset: 16 # only available for Android 8.0 devices and above
+  adaptive_icon_monochrome: "assets/icon/icono.png" # only available for Android 13 devices and above
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  remove_alpha_ios: true
+  background_color_ios: "#ffffff"
+  web:
+    generate: true
+    image_path: "assets/icon/icono.png"
+    background_color: "#hexcode"
+    theme_color: "#hexcode"
+  windows:
+    generate: true
+    image_path: "assets/icon/icono.png"
+    icon_size: 48 # min:48, max:256, default: 48
+  macos:
+    generate: true
+    image_path: "assets/icon/icono.png"

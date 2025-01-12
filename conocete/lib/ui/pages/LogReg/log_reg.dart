@@ -27,25 +27,45 @@ class LogRegState extends State<LogReg> {
   @override
   Widget build(BuildContext context) {
     return showLogState
-        ? LogState(toggleState: toggleState)
-        : RegState(toggleState: toggleState);
+        ? Log(toggleState: toggleState)
+        : Reg(toggleState: toggleState);
   }
 }
 
-class LogState extends StatelessWidget {
+class Log extends StatefulWidget {
   final VoidCallback toggleState;
 
-  const LogState({required this.toggleState, super.key});
+  const Log({required this.toggleState, super.key});
+
+  @override
+  _LogState createState() => _LogState();
+}
+
+class _LogState extends State<Log> {
+  late TextEditingController emailController;
+  late TextEditingController contrasenaController;
+
+  @override
+  void initState() {
+    super.initState();
+    emailController = TextEditingController();
+    contrasenaController = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    emailController.dispose();
+    contrasenaController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     final altura = MediaQuery.of(context).size.height;
     final anchura = MediaQuery.of(context).size.width;
-    var contrasenaController = TextEditingController();
-    var emailController = TextEditingController();
 
     return Scaffold(
-      appBar: Custom_appbar(),
+      appBar: CustomAppbar(),
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -88,7 +108,7 @@ class LogState extends StatelessWidget {
                   child: SizedBox(
                     width: anchura * 0.5,
                     child: GestureDetector(
-                      onTap: toggleState,
+                      onTap: widget.toggleState,
                       child: Text(
                         "Registrarse",
                         textScaler: TextScaler.linear(anchura * 0.006),
@@ -96,59 +116,82 @@ class LogState extends StatelessWidget {
                     ),
                   ),
                 ),
-                //hasta aqui los dos textos
                 Positioned(
                   left: anchura * 0.15,
                   child: Column(
                     children: [
                       SizedBox(
-                        height: altura * 0.2,
+                        height: altura * 0.1,
                         width: anchura * 0.7,
                       ),
                       SizedBox(
-                        height: altura * 0.10,
+                        height: altura * 0.05,
                         width: anchura * 0.7,
-                        child: TextField(controller:emailController,
+                        child: Text("Correo", textScaler: TextScaler.linear(2)),
+                      ),
+                      SizedBox(
+                        width: anchura * 0.7,
+                        child: TextField(
+                          controller: emailController,
                           decoration: InputDecoration(
-                            border: OutlineInputBorder(borderSide: BorderSide(width: 5)),
-                            labelText: 'Correo',
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                width: 5,
+                                color: Theme.of(context).colorScheme.primary,
+                              ),
+                              borderRadius: BorderRadius.circular(45),
+                            ),
                           ),
                         ),
                       ),
                       SizedBox(
-                        height: altura * 0.10,
+                        height: altura * 0.05,
                         width: anchura * 0.7,
-                        child: TextField(controller: contrasenaController = TextEditingController(),
+                        child: Text("Contraseña", textScaler: TextScaler.linear(2)),
+                      ),
+                      SizedBox(
+                        width: anchura * 0.7,
+                        child: TextField(
+                          controller: contrasenaController,
                           decoration: InputDecoration(
-                            border: OutlineInputBorder(borderSide: BorderSide(width: 5)),
-                            labelText: 'Contraseña',
-
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                width: 5,
+                                color: Theme.of(context).colorScheme.primary,
+                              ),
+                              borderRadius: BorderRadius.circular(45),
+                            ),
                           ),
                         ),
                       ),
                       SizedBox(
-                        height: altura * 0.10,
+                        height: altura * 0.15,
                         width: anchura * 0.7,
                         child: TextButton(
                           onPressed: () {
                             Navigator.of(context).push(
                               MaterialPageRoute(
-                                builder: (context) => OlvidoState(),
+                                builder: (context) => Olvido(),
                               ),
                             );
                           },
-                          child: Text("Olvido la contraseña?",
-                              style: TextStyle(color: Colors.black)),
+                          child: Text(
+                            "Olvido la contraseña?",
+                            style: TextStyle(color: Colors.black),
+                          ),
                         ),
                       ),
                       SizedBox(
                         child: BotonSimple(
-                            etiqueta: "Iniciar Sesion",
-                            hacer: () {login(emailController,contrasenaController,context);}),
+                          etiqueta: "Iniciar Sesion",
+                          hacer: () {
+                            login(emailController, contrasenaController, context);
+                          },
+                        ),
                       ),
                     ],
                   ),
-                )
+                ),
               ],
             ),
           ],
@@ -159,21 +202,44 @@ class LogState extends StatelessWidget {
   }
 }
 
-class RegState extends StatelessWidget {
+class Reg extends StatefulWidget {
   final VoidCallback toggleState;
 
-  const RegState({required this.toggleState, super.key});
+  const Reg({required this.toggleState, super.key});
+
+  @override
+  _RegState createState() => _RegState();
+}
+
+class _RegState extends State<Reg> {
+
+  late TextEditingController emailController;
+  late TextEditingController contrasenaController;
+  late TextEditingController cont2Controller;
+
+  @override
+  void initState() {
+    super.initState();
+    emailController = TextEditingController();
+    contrasenaController = TextEditingController();
+    cont2Controller = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    emailController.dispose();
+    contrasenaController.dispose();
+    cont2Controller.dispose();
+    super.dispose();
+  }
+
 
   @override
   Widget build(BuildContext context) {
     final altura = MediaQuery.of(context).size.height;
     final anchura = MediaQuery.of(context).size.width;
-    var cont2Controller = TextEditingController();
-    var contrasenaController = TextEditingController();
-    var emailController = TextEditingController();
-
     return Scaffold(
-      appBar: Custom_appbar(),
+      appBar: CustomAppbar(),
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -205,7 +271,7 @@ class RegState extends StatelessWidget {
                   left: anchura * 0.05,
                   top: altura * 0.03,
                   child: GestureDetector(
-                    onTap: toggleState,
+                    onTap: widget.toggleState,
                     child: Text(
                       "Iniciar sesión",
                       textScaler: TextScaler.linear(anchura * 0.006),
@@ -229,35 +295,46 @@ class RegState extends StatelessWidget {
                   child: Column(
                     children: [
                       SizedBox(
-                        height: altura * 0.2,
+                        height: altura * 0.1,
                       ),
                       SizedBox(
-                        height: altura * 0.10,
+                        height: altura*0.05,
+                        width: anchura * 0.7,
+                        child: Text("Correo",textScaler: TextScaler.linear(2),),
+                      ),
+                      SizedBox(
+
                         width: anchura * 0.7,
                         child: TextField(controller:emailController,
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(borderSide: BorderSide(width: 5)),
-                            labelText: 'Correo',
+
+                            decoration: InputDecoration(enabledBorder: OutlineInputBorder(borderSide: BorderSide(width: 5, color: Theme.of(context).colorScheme.primary),borderRadius:BorderRadius.circular(45)) ,
                           ),
                         ),
                       ),
                       SizedBox(
-                        height: altura * 0.10,
+                        height: altura*0.05,
+                        width: anchura * 0.7,
+                        child: Text("Contraseña",textScaler: TextScaler.linear(2),),
+                      ),
+                      SizedBox(
+
                         width: anchura * 0.7,
                         child: TextField(controller:contrasenaController,
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(borderSide: BorderSide(width: 5)),
-                            labelText: 'Contraseña',
+                          decoration: InputDecoration(enabledBorder: OutlineInputBorder(borderSide: BorderSide(width: 5, color: Theme.of(context).colorScheme.primary),borderRadius:BorderRadius.circular(45)) ,
+
                           ),
                         ),
                       ),
                       SizedBox(
-                        height: altura * 0.10,
+                        height: altura*0.05,
+                        width: anchura * 0.7,
+                        child: Text("Confirmar contraseña",textScaler: TextScaler.linear(2),),
+                      ),
+                      SizedBox(
+                        height: altura*0.10,
                         width: anchura * 0.7,
                         child: TextField(controller:cont2Controller,
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(borderSide: BorderSide(width: 5)),
-                            labelText: 'Confirmar Contraseña',
+                          decoration: InputDecoration(enabledBorder: OutlineInputBorder(borderSide: BorderSide(width: 5, color: Theme.of(context).colorScheme.primary),borderRadius:BorderRadius.circular(45)) ,
                           ),
                         ),
                       ),
@@ -277,8 +354,8 @@ class RegState extends StatelessWidget {
   }
 }
 
-class OlvidoState extends StatelessWidget {
-  const OlvidoState({super.key});
+class Olvido extends StatelessWidget {
+  const Olvido({super.key});
 
 
 
@@ -289,7 +366,7 @@ class OlvidoState extends StatelessWidget {
     final anchura = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      appBar: Custom_appbar(),
+      appBar: CustomAppbar(),
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -331,11 +408,10 @@ class OlvidoState extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: altura * 0.10,
+                        height: altura * 0.1,
                         width: anchura * 0.7,
                         child: TextField(
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(borderSide: BorderSide(width: 5)),
+                          decoration: InputDecoration(enabledBorder: OutlineInputBorder(borderSide: BorderSide(width: 5, color: Theme.of(context).colorScheme.primary),borderRadius:BorderRadius.circular(45)) ,
                             labelText: 'Correo',
                           ),
                         ),

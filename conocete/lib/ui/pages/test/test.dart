@@ -18,7 +18,7 @@ class Test extends StatelessWidget {
     final anchura = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      appBar: Custom_appbar(),
+      appBar: CustomAppbar(),
       body: Center(
         child: Column(
           children: [

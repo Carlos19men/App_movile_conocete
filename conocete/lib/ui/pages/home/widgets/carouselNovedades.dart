@@ -4,23 +4,28 @@ import 'package:conocete/ui/pages/widgets/carousel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class CarouselNews extends StatefulWidget {
-  const CarouselNews({super.key});
+class CarouselNews extends StatefulWidget {const CarouselNews({super.key});
+
+
 
   @override
   State<CarouselNews> createState() => _CarouselNewsState();
 }
 
 class _CarouselNewsState extends State<CarouselNews> {
+  List _items = [];
   //consulta de la lista de novedades
+  @override
+  void initState() {
+    super.initState();
+    readJson();
+  }
 
-  List _items = [
-    {'hola': 'como vas'}
-  ];
 
   Future<void> readJson() async {
+  if (_items.isEmpty) {
     final String response =
-        await rootBundle.loadString('assets/novedades/novedades.json');
+    await rootBundle.loadString('assets/novedades/novedades.json');
 
     final data = await json.decode(response);
 
@@ -28,11 +33,13 @@ class _CarouselNewsState extends State<CarouselNews> {
       _items = data;
     });
   }
+  }
 
   @override
   Widget build(BuildContext context) {
-    readJson();
-
+    if (_items.isEmpty) {
+      return Center(child: CircularProgressIndicator());
+    }
     //desordenamos la lista
     //creamos una sita de novedades
 

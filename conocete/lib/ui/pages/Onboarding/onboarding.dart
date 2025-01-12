@@ -17,7 +17,7 @@ class Onboarding extends StatelessWidget {
     final anchura = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      appBar: Custom_appbar(),
+      appBar: CustomAppbar(),
       body:Stack(
         children: [
           Center( heightFactor: 1.0,
@@ -28,7 +28,6 @@ class Onboarding extends StatelessWidget {
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-
                 Stack(
                     alignment:Alignment(0, -1),
                     children: [
@@ -38,7 +37,37 @@ class Onboarding extends StatelessWidget {
                           image: AssetImage('assets/chica_onboard.png'),
                         ),
                       ),
-                      BotonNav(etiqueta: "Iniciar", sig: LogReg(),hacer:(){})
+                      Positioned(
+                      top: altura*0.3,
+                   child: Center(
+                     child: TextButton(
+                         style: ButtonStyle(
+                           foregroundColor: WidgetStateProperty.all<Color>(Color(0xff2e2e2e)),
+                           backgroundColor: WidgetStateProperty.resolveWith<Color?>(
+                                 (Set<WidgetState> states) {
+                               if (states.contains(WidgetState.pressed)) {
+                                 return Theme.of(context)
+                                     .colorScheme
+                                     .tertiary
+                                     .withAlpha(128);
+                               }
+                               return Theme.of(context)
+                                   .colorScheme
+                                   .surface.withAlpha(200); // Use the component's default.
+                             },
+                           ),
+                         ),
+                         onPressed: () {
+                           Navigator.push(
+                             context,
+                             MaterialPageRoute(builder: (context) => LogReg()),
+                           );
+                         },
+                         child:  Text(
+                           "Iniciar",
+                           textScaler: TextScaler.linear(2),
+                         )),
+                   ),)
                     ]),
               ]),
         ],

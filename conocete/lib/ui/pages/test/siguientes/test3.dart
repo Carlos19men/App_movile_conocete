@@ -19,14 +19,16 @@ class _Test3State extends State<Test3> {
   var check1 = false;
   var check2 = false;
 
-  var rellenar = Column(children: [SizedBox(height:23 ),SizedBox(height: 30,)]);
+  var rellenar = Column(children: [SizedBox(height:23),SizedBox(height: 30,)]);
 
   void quitar (){
-    rellenar = Column(children: [SizedBox(height:23) ,SizedBox(height: 30,)],);
+    rellenar = Column(children: [SizedBox(height:23 ) ,SizedBox(height: 30,)],);
   }
   void mostrar (){
     rellenar = Column(children: [SizedBox(height:23 ,child:
-      Text("Pregunta del embarazo")),SizedBox(height: 30,child: TextField(),)]);
+      Text("Pregunta del embarazo")),SizedBox(height: 30,child:
+    Padding(padding: EdgeInsets.all(40),child:
+    TextField(),))]);
 
   }
 
@@ -39,15 +41,25 @@ class _Test3State extends State<Test3> {
     final anchura = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      appBar: Custom_appbar(),
+      appBar: CustomAppbar(),
       body: Center(
         child: Column(
           children: [
+            SizedBox(height: altura * 0.05),
             SizedBox(
+              width: anchura * 0.8,
               child: Text(
-                "Ha vivido un embarazo?",
-                style: TextStyle(fontSize: 25),
-              ),
+                  style: TextStyle(
+                    fontSize: 20,
+
+                  ),
+                  'Vamos a conocerte un poco'),
+            ),
+            SizedBox(
+                height: altura*0.05),
+            SizedBox(
+              width: anchura*0.8,
+              child: Text(style: TextStyle(fontSize: 20,),'Has vivido un embarazo?'),
             ),
             Row(
               mainAxisSize: MainAxisSize.max,
@@ -57,14 +69,14 @@ class _Test3State extends State<Test3> {
                   image: AssetImage(
                     'assets/img/t41.png',
                   ),
-                  width: anchura * 0.3,
+                  width: anchura * 0.25,
                 ),
                 SizedBox(
                   width: anchura * 0.2,
                 ),
                 Image(
                   image: AssetImage('assets/img/t42.png'),
-                  width: anchura * 0.3,
+                  width: anchura * 0.25,
                 ),
               ],
             ),
@@ -104,13 +116,28 @@ class _Test3State extends State<Test3> {
               ],
             ),
 
+            Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Si.", style: TextStyle(fontSize: 20)),
+                SizedBox(
+                  width: anchura * 0.45,
+                ),
+                Text("No.", style: TextStyle(fontSize: 20)),
+              ],
+            ),
+
             SizedBox(
-              height: altura * 0.1,
+              height: altura * 0.05,
+            ),
+            SizedBox(
+              height: altura * 0.078,
               child: Text(textoemb, style: TextStyle(fontSize: 20)),
             ),
             rellenar,
             SizedBox(
-              height: altura*0.2,
+              height: altura*0.05,
             ),
             BotonDoble(
                 etiqueta: "Anterior",

@@ -26,7 +26,7 @@ class TipoUsrState extends State<TipoUsr> {
     }
 
     return Scaffold(
-      appBar:  Custom_appbar(),
+      appBar:  CustomAppbar(),
       body: Column(
         children: [
           Text(

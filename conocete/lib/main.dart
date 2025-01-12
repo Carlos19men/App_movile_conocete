@@ -40,6 +40,7 @@ class MyApp extends StatelessWidget {
             surface: const Color(0xffffffff),
             onSurface: grisOscuro),
             shadowColor: grisOscuro,
+
         useMaterial3: true,
         buttonTheme: ButtonThemeData(
           buttonColor: Colors.black,

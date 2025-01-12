@@ -11,6 +11,7 @@ class MenuDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
@@ -27,7 +28,7 @@ class MenuDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.supervised_user_circle_sharp),
+            leading: Icon(Icons.folder_copy_outlined),
             title: Text('Mis documentos'),
             onTap: () {
               Navigator.push(context,

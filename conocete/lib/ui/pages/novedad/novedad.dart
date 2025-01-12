@@ -13,7 +13,7 @@ class Novedad extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: Custom_appbar(),
+      appBar: CustomAppbar(),
       body: ListView(
         children: [
           //Imagen de la novedad

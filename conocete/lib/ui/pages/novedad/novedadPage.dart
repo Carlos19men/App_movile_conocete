@@ -1,6 +1,6 @@
 import 'package:conocete/ui/pages/novedad/widgets/novedad.dart';
 import 'package:flutter/material.dart';
-import '../widgets/bodyMargin.dart';
+import '../widgets/body_margin.dart';
 
 // ignore: must_be_immutable
 class NovedadPage extends StatelessWidget {

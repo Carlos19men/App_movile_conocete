@@ -25,7 +25,7 @@ class _Test2State extends State<Test2> {
 
 
     return Scaffold(
-      appBar: Custom_appbar(),
+      appBar: CustomAppbar(),
       body: Center(
         child: Column(
           children: [
@@ -45,7 +45,6 @@ class _Test2State extends State<Test2> {
               child: Text(
                   style: TextStyle(
                     fontSize: 20,
-                    fontWeight: FontWeight.bold,
                   ),
                   'Cual es tu edad?'),
             ),

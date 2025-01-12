@@ -18,14 +18,13 @@ class _AutoexamenState extends State<Autoexamen> {
       //carrusel de fotos
 
       //Barra superior
-      appBar: Custom_appbar(),
-
+      appBar: CustomAppbar(),
       //cuerpo
       body: Container(
         padding: EdgeInsets.all(8.0),
         decoration: BoxDecoration(color: Colors.pink[100]),
         child: ListView(children: [
-          Positioned(child: Image.asset('assets/img/mujer_autoexamen1.png')),
+           Image.asset('assets/img/mujer_autoexamen1.png'),
 
           Container(
             margin: EdgeInsets.only(left: 10.0, top: 10.0),

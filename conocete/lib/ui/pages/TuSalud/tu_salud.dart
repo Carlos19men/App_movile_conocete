@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'widgets/textItem.dart';
-import 'widgets/textBlock.dart';
-import 'autoExamen.dart';
+import 'widgets/text_item.dart';
+import 'widgets/text_block.dart';
+import 'auto_examen.dart';
 
 // ignore: must_be_immutable
 class Tusalud extends StatelessWidget {
@@ -68,7 +68,7 @@ class Tusalud extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(25.0)),
-                child: Expanded(
+
                   child: InkWell(
                     child: Text('Realizar autoexamen',
                         style: TextStyle(
@@ -80,7 +80,7 @@ class Tusalud extends StatelessWidget {
                               builder: (context) => Autoexamen()));
                     },
                   ),
-                ),
+
               ),
             ),
           ],

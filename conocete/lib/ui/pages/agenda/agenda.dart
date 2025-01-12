@@ -122,7 +122,7 @@ class _AgendaState extends State<Agenda> {
 
         Divider(),
 
-        Positioned(child: Text('Tareas pendientes')),
+        Text('Tareas pendientes'),
 
         Column(
           children: recordatorios,
@@ -130,7 +130,7 @@ class _AgendaState extends State<Agenda> {
 
         Divider(),
 
-        Positioned(child: Text('Tareas de hoy')),
+        Text('Tareas de hoy'),
 
         Column(
           children: recordatorios,
@@ -138,7 +138,7 @@ class _AgendaState extends State<Agenda> {
 
         Divider(),
 
-        Positioned(child: Text('Proximas tareas')),
+        Text('Proximas tareas'),
 
         //procimos eventos
         Column(

@@ -6,7 +6,7 @@ class Novedad {
   Novedad(this.titulo, this.imgUrl, this.information);
 
   //setter and geter
-  String get Titulo {
+  String get gettitulo {
     return titulo;
   }
 

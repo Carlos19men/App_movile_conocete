@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import '../TuSalud/tuSalud.dart';
+import '../TuSalud/tu_salud.dart';
 import '../agenda/agenda.dart';
 import '../home/homePage.dart';
 import 'menu_drawer.dart';
-import 'bodyMargin.dart';
+import 'body_margin.dart';
 import 'cust_appbar.dart';
 
 class Navbar extends StatefulWidget {
@@ -30,7 +30,7 @@ class _Navbar extends State<Navbar> {
   Widget build(BuildContext context) {
     return Scaffold(
       //Barra superior
-      appBar: Custom_appbar(),
+      appBar: CustomAppbar(),
 
       endDrawer: MenuDrawer(),
       //cuerpo
@@ -48,7 +48,7 @@ class _Navbar extends State<Navbar> {
                 BottomNavigationBarItem(
                     icon: Icon(Icons.home,color: Theme.of(context).colorScheme.onPrimary,), label: 'Inicio',activeIcon:Icon(Icons.home_outlined,color: Theme.of(context).colorScheme.error,),),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.add_a_photo,color: Theme.of(context).colorScheme.onPrimary,), label: 'Agenda',activeIcon:Icon(Icons.add_a_photo_outlined,color: Theme.of(context).colorScheme.onPrimary,) ),
+                    icon: Icon(Icons.add_a_photo,color: Theme.of(context).colorScheme.onPrimary,), label: 'Agenda',activeIcon:Icon(Icons.add_a_photo_outlined,color: Theme.of(context).colorScheme.error,) ),
                 BottomNavigationBarItem(
                     icon: Icon(Icons.health_and_safety,color: Theme.of(context).colorScheme.onPrimary,), label: 'Tu salud',activeIcon:Icon(Icons.health_and_safety_outlined,color: Theme.of(context).colorScheme.error,),)
               ])),

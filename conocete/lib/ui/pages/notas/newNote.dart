@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../widgets/bodyMargin.dart';
+import '../widgets/body_margin.dart';
 
 class Newnote extends StatelessWidget {
   const Newnote({super.key});

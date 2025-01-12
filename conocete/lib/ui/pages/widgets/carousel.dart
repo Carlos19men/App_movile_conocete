@@ -1,7 +1,7 @@
 import 'package:conocete/ui/pages/novedad/widgets/novedad.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'carouselItem.dart';
+import 'carouse_item.dart';
 
 // ignore: must_be_immutable
 class Carousel extends StatelessWidget {

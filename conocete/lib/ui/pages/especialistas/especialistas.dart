@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../widgets/bodyMargin.dart';
+import '../widgets/body_margin.dart';
 import 'widgets/cardSpecialis.dart';
 
 class SpecialistPage extends StatelessWidget {
